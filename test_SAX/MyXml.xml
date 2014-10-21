@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<people> 
+
+  <person personid="e01" enable="true"> 
+    <name>张三</name> 
+    <tel>5128</tel> 
+    <email>txq512@sina.com</email> 
+  </person> 
+    
+  <person personid="e02" enable="false"> 
+    <name>meixin</name> 
+    <tel>5252525</tel> 
+    <email>wnight88@sina.com</email> 
+  </person> 
+    
+  <person personid="e03" enable="true"> 
+    <name>yu</name> 
+    <tel>5389654</tel> 
+    <email>yu@188.net</email> 
+  </person> 
+    
+</people>
