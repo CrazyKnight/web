@@ -19,6 +19,8 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
+import com.bean.DBdata;
+
 @SuppressWarnings("serial")
 public class MainFrame extends JFrame {
 
@@ -72,39 +74,50 @@ public class MainFrame extends JFrame {
 		return null;
 	}
 }
-class JdbcDialog extends JDialog{
-	
+
+class JdbcDialog extends JDialog {
+
 	private JTextField username;
 	private JTextField password;
 	private JTextField dbname;
-	
-	public JdbcDialog(JFrame owner){
-		super(owner,"输入数据库相关信息",true);
-		JPanel panel = new JPanel();	
-		panel.setLayout(new GridLayout(3,2));
-		
+	private JTextField Tblname;
+
+	public JdbcDialog(final JFrame owner) {
+		super(owner, "输入数据库相关信息", true);
+		JPanel panel = new JPanel();
+		panel.setLayout(new GridLayout(4, 2));
+
 		panel.add(new JLabel("用户名："));
 		panel.add(username = new JTextField(""));
 		panel.add(new JLabel("密码："));
 		panel.add(password = new JTextField(""));
 		panel.add(new JLabel("数据库名"));
 		panel.add(dbname = new JTextField(""));
-		add(panel,BorderLayout.CENTER);
-		setSize(250,150);
-		
-		
-		
+		panel.add(new JLabel("表名"));
+		panel.add(Tblname = new JTextField(""));
+		add(panel, BorderLayout.CENTER);
+		setSize(250, 150);
+
 		JButton okJButton = new JButton("ok");
-		okJButton.addActionListener(new ActionListener(){
-			
+		okJButton.addActionListener(new ActionListener() {
+
 			public void actionPerformed(ActionEvent event) {
 				
+				/*
+				 * 这个data就是那个保存该对话框信息的对象，访问数据库的操作要用到这个信息
+				 */
+				DBdata data = new DBdata();
+				data.setUsername(username.getText());
+				data.setPassword(password.getText());
+				data.setDBname(dbname.getText());
+				data.setTblname(Tblname.getText());
+				showData s = new showData(owner);
 			}
-			
+
 		});
 		JButton cancelButton = new JButton("cancel");
-		
-		cancelButton.addActionListener(new ActionListener(){
+
+		cancelButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				setVisible(false);
 			}
@@ -112,9 +125,16 @@ class JdbcDialog extends JDialog{
 		JPanel buttonPanel = new JPanel();
 		buttonPanel.add(okJButton);
 		buttonPanel.add(cancelButton);
-		add(buttonPanel,BorderLayout.SOUTH);
-		
-		
+		add(buttonPanel, BorderLayout.SOUTH);
+
 	}
 }
-
+class showData extends JDialog{
+	public showData(JFrame owner){
+		super(owner, "数据显示", true);
+		JPanel panel = new JPanel();
+		add(panel);
+		setSize(300,300);
+		setVisible(true);
+	}
+}
