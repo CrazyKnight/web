@@ -1,0 +1,78 @@
+add-xml-decl: no
+add-xml-pi: no
+add-xml-space: no
+alt-text:    
+ascii-chars: yes
+assume-xml-procins: no
+bare: no
+break-before-br: no
+char-encoding: UTF8
+clean: yes
+css-prefix:       
+doctype: auto
+drop-empty-paras: yes
+drop-font-tags: yes
+drop-proprietary-attributes: yes
+enclose-block-text: no
+enclose-text: yes
+error-file:      
+escape-cdata: no
+fix-backslash: yes
+fix-bad-comments: yes
+fix-uri: yes
+force-output: no
+gnu-emacs: no
+hide-comments: no
+hide-endtags: no
+indent: no
+indent-attributes: no
+indent-cdata: no
+indent-spaces: 2
+input-encoding: UTF8
+input-xml: no
+join-classes: no
+join-styles: yes
+keep-time: yes
+language:      
+literal-attributes: no
+logical-emphasis: no
+lower-literals: yes
+markup: yes
+ncr: yes
+new-blocklevel-tags: cfoutput cfquery 
+new-empty-tags: cfelse 
+new-inline-tags: cfelse msubsup msqrt munderover mroot mfrac mrow msup msub mmultiscripts mtable munder math cfif mover mtr mth mtd mprescripts mo mn mi mtext 
+new-pre-tags:
+newline: crlf
+numeric-entities: yes
+only-errors: no
+output-encoding: UTF8
+output-html: no
+output-raw: yes
+output-xhtml: yes
+output-xml: yes
+quiet: no
+quote-ampersand: yes
+quote-marks: no
+quote-nbsp: yes
+repeated-attributes: keep-last
+replace-color: no
+show-body-only: yes
+show-errors: 6
+show-warnings: yes
+slide-style:      
+split: no
+tab-size: 8
+tidy-mark: no
+trim-empty-elements: yes
+uppercase-attributes: no
+uppercase-tags: no
+word-2000: no
+wrap: 72
+wrap-asp: yes
+wrap-attributes: no
+wrap-jste:yes
+wrap-php: yes
+wrap-script-literals: no
+wrap-sections: yes
+write-back: no
