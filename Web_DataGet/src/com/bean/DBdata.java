@@ -4,6 +4,7 @@ public class DBdata {
 	private String Username;
 	private String Password;
 	private String DBname;
+	private String Tblname;
 	public String getUsername() {
 		return Username;
 	}
@@ -21,5 +22,11 @@ public class DBdata {
 	}
 	public void setDBname(String dBname) {
 		DBname = dBname;
+	}
+	public String getTblname() {
+		return Tblname;
+	}
+	public void setTblname(String tblname) {
+		Tblname = tblname;
 	}
 }
