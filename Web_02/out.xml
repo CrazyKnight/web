@@ -1,0 +1,691 @@
+<html>
+  <head>
+    <meta name="generator" content="HTML Tidy for Java (vers. 2009-12-01), see jtidy.sourceforge.net" />
+    <title>哈尔滨工业大学教务处欢迎您！！！</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link href="News/Css/Style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+window.onload=function()
+{
+        var oCal=document.getElementById("calendar");
+        var oTitle=oCal.getElementsByTagName("h1")[0];
+        var oUl=oCal.getElementsByTagName("ul")[0];
+        var aLi=oUl.getElementsByTagName("li");
+        var oPre=oCal.getElementsByTagName("span")[0];
+        var oNext=oCal.getElementsByTagName("span")[1];
+        var oNow=new Date();
+        var nowYear=oNow.getFullYear();
+        var nowMonth=oNow.getMonth();
+        var nowDate=oNow.getDate();
+        var nowDay=oNow.getDay();
+        var nowTime=oNow.getTime();
+        var tMonth=nowMonth;//作为日历里更改的那个Month
+        function createCalendar(tMonth)
+        {
+                //根据传入的月份重新算时间
+                var oDate=new Date();
+                oDate.setMonth(tMonth);
+                oDate.setDate(1);
+                var iYear=oDate.getFullYear();
+                var iMonth=oDate.getMonth();
+                var iDay=oDate.getDay();
+                var iDay=oDate.getDay();
+                if (iDay==0){
+                        iDay=6;}
+                else{
+                        iDay--
+                }
+
+                oTitle.innerHTML=iYear+"年"+(iMonth+1)+"月";
+                //初始化一下
+                for(var i=0;i&lt;aLi.length;i++)
+                {
+                        aLi[i].innerHTML="";
+                        aLi[i].style.height="15px";
+                        aLi[i].className="";
+                }
+                var iSum=0;     //存本月天数
+                var bLeap=false;//是否是闰年
+                if(iYear%4==0 &amp;&amp; iYear%100!==0 || iYear%400==0) bLeap=true;
+                switch(iMonth+1)
+                {
+                        case 1:
+                        case 3:
+                        case 5:
+                        case 7:
+                        case 8:
+                        case 10:
+                        case 12:
+                                iSum=31;
+                                break;
+                        case 4:
+                        case 6:
+                        case 9:
+                        case 11:
+                                iSum=30;
+                                break;
+                        case 2:
+                                if(bLeap) iSum=29;
+                                else iSum=28;
+                                break;
+                }
+                for(var i=1;i&lt;=iSum;i++)
+                {
+                        aLi[iDay].innerHTML=i;
+                        
+                        iDay++;
+                }
+                
+                for(var i=0;i&lt;aLi.length;i++)
+                {
+                
+                        if(aLi[i].innerHTML==nowDate &amp;&amp; iYear==nowYear &amp;&amp; iMonth==nowMonth)
+                        {
+                                aLi[i].className="active";
+                                
+                        }
+                        
+                        else if((aLi[i].innerHTML&lt;nowDate &amp;&amp; iMonth==nowMonth &amp;&amp; iYear==nowYear) ||
+                                iMonth&lt;nowMonth &amp;&amp; iYear==nowYear || 
+                                iYear&lt;nowYear)
+                        {
+                                aLi[i].className="grey";
+                                
+                        }
+                }
+                
+                //把没字的格子折叠起来
+                for(var i=0;i&lt;aLi.length;i++)
+                {
+                        if(aLi[i].innerHTML=="")
+                        {
+                                aLi[i].style.border="0px";
+                        }
+                }
+        }
+        createCalendar(tMonth);
+        oPre.onclick=function()
+        {
+                createCalendar(/*--*/tMonth);
+        };
+        
+        oNext.onclick=function()
+        {
+                createCalendar(/*++*/tMonth);
+        };
+};
+    </script>
+  </head>
+  <body text="#000000" leftmargin="0" topmargin="0">
+    <table width="1004" cellpadding="0" cellspacing="0" border="0" align="center">
+      <tr>
+        <td>
+          <table width="1004" cellpadding="0" cellspacing="0" align="center" height="189">
+            <tr>
+              <td></td>
+              <td>
+<script type="text/javascript" src="/css/photo.js">
+                </script>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <table height="46" border="0" cellpadding="0" cellspacing="0" align="center" width="1004" background="../images/menu_bg.gif">
+            <tr>
+              <td>
+                <table cellpadding="0" cellspacing="0" height="25" style="margin:10px 90px;">
+                  <tr>
+                    <td style="color:#FFF;" background="../images/menu.png" width="107">
+                    <a href="/" style="color:#fff; padding-left:30px;">首 &#160;&#160;页</a> &#160;&#160;</td>
+                    <td style="color:#FFF;" background="../images/menu.png" width="107">&#160;&#160;
+                    <a href="/news/sub_jgsz.asp?c_id=A00590002" style="color:#fff;padding-left:20px;">机构设置</a> &#160;&#160;</td>
+                    <td style="color:#FFF;" background="../images/menu.png" width="107">&#160;&#160;
+                    <a href="/news/sub_gzzd.asp?cataid=A0061" style="color:#fff;padding-left:20px;">规章制度</a> &#160;&#160;</td>
+                    <td style="color:#FFF;" background="../images/menu.png" width="107">&#160;&#160;
+                    <a href="/news/sub_bszn.asp?cataid=A0060" style="color:#fff;padding-left:20px;">办事指南</a>&#160;&#160;</td>
+                    <td style="color:#FFF;" background="../images/menu.png" width="107">&#160;&#160;
+                    <a href="/news/sub_zlxz.asp?c_id=A00620001" style="color:#fff;padding-left:20px;">资料下载</a>&#160;&#160;</td>
+                    <td style="color:#FFF;" background="../images/menu.png" width="107">&#160;&#160;
+                    <a href="/news/sub_zxfw.asp?c_id=A00630001" style="color:#fff;padding-left:20px;">在线服务</a>&#160;&#160;</td>
+                    <td style="color:#FFF;" background="../images/menu.png" width="107">&#160;&#160;
+                    <a href="http://cms.hit.edu.cn" target="_blank" style="color:#fff;padding-left:20px;">网络教学</a>&#160;&#160;</td>
+                    <td style="color:#FFF;" background="../images/menu.png" width="107">&#160;&#160;
+                    <a href="/news/sub_jljh.asp?cataid=A0065" style="color:#fff;padding-left:20px;">交流交换</a>&#160;&#160;</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+    <table width="1004" border="0" align="center" cellpadding="0" cellspacing="0" style="padding-top:8px;" bgcolor="#FFFFFF">
+      <tr>
+        <td width="50" style="background-image:url(images/bg_left.jpg); background-repeat:repeat-y;"></td>
+        <td valign="top">
+<!--左栏开始-->
+          <table border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td style="padding-left:1px; padding-right:5px; padding-top:5px;" valign="top">
+                <table border="0" cellpadding="0" cellspacing="0" background="images/block_bg_1.gif" height="232" width="280">
+                  <tr>
+                    <td style="padding-top:15px; padding-left:4px;" valign="top">
+                      <img src="images/news.png" width="268" height="35" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top">
+                      <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                        <tr>
+                          <td valign="top" style="padding-right:10px;">
+                            <table border="0" cellpadding="0" cellspacing="0">
+                              <tr>
+                                <td style="padding:8px 8px 0px 8px;" valign="top">
+                                  <img src="images/news_coin.jpg" width="12" height="12" />
+                                </td>
+                                <td>
+                                <a href="/news/Showxw.asp?id=3217" target="_blank" class="news">转发：关于2014年暑假、中秋节放假时间安排及有关要求的通知</a>&#160; 2014-7-18&#160;</td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td valign="top" style="padding-right:10px;">
+                            <table border="0" cellpadding="0" cellspacing="0">
+                              <tr>
+                                <td style="padding:8px 8px 0px 8px;" valign="top">
+                                  <img src="images/news_coin.jpg" width="12" height="12" />
+                                </td>
+                                <td>
+                                <a href="/news/Showxw.asp?id=3182" target="_blank" class="news">转发：关于2014年端午节放假的通知</a>&#160; 2014-5-23&#160;</td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td valign="top" style="padding-right:10px;">
+                            <table border="0" cellpadding="0" cellspacing="0">
+                              <tr>
+                                <td style="padding:8px 8px 0px 8px;" valign="top">
+                                  <img src="images/news_coin.jpg" width="12" height="12" />
+                                </td>
+                                <td>
+                                <a href="/news/Showxw.asp?id=3129" target="_blank" class="news">转发：关于2014年寒假放假时间安排及有关要求的通知</a>&#160; 2013-12-18&#160;</td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="right" style="padding-right:15px; padding-bottom:10px;">
+                      <a href="/news/sub_xyxw.asp?cataid=A00340004">
+                        <img src="images/more_blue.jpg" width="37" height="10" />
+                      </a>
+                    </td>
+                  </tr>
+                </table>
+<!--左侧新闻栏-->
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <table border="0" cellpadding="0" cellspacing="0" background="images/block_bg_1.gif" height="232" width="280">
+                  <tr>
+                    <td style="padding-top:15px;padding-left:4px;" valign="top" height="50">
+                      <a href="http://www.hit.edu.cn/calender.htm" target="_blank">
+                        <img src="images/calender.png" width="268" height="35" />
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="center" width="206">
+                      <div id="calendar" class="c_header">
+                      <span class="pre">
+                        <img src="images/cal_coin.jpg" width="11" height="11" />
+                      </span> 
+                      <span class="next">
+                        <img src="images/cal_coin.jpg" width="11" height="11" />
+                      </span> 
+                      <ol>
+                        <li>M</li>
+                        <li>T</li>
+                        <li>W</li>
+                        <li>T</li>
+                        <li>F</li>
+                        <li style="color:#ff7800">S</li>
+                        <li style="color:#ff7800">S</li>
+                      </ol></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td id="weekPlate" style="color:#ff7800; font-weight:bold;" align="center"></td>
+                  </tr>
+                </table>
+<!--校历-->
+              </td>
+            </tr>
+            <tr>
+              <td style="padding-bottom:10px;">
+                <table border="0" cellpadding="0" cellspacing="0" background="images/block_bg_2.gif" height="149" width="280">
+                  <tr>
+                    <td style="padding-top:15px;padding-left:4px;" valign="top">
+                      <img src="images/search.png" width="268" height="35" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="center" style="padding-top:15px;">热词：
+                    <a href="/news/searchresult.asp?keyword=%8C03%505C%4EE3%8BFE" target="_blank" class=" news">调停代课</a> 
+                    <a href="/news/searchresult.asp?keyword=%6559%5BA4%501F%7528" target="_blank" class=" news">教室借用</a> 
+                    <a href="/news/searchresult.asp?keyword=%5B66%751F%8BC1" target="_blank" class=" news">学生证</a> 
+                    <a href="/news/searchresult.asp?keyword=%6210%7EE9%590D%6838" target="_blank" class=" news">成绩复核</a></td>
+                  </tr>
+                  <tr>
+                    <td valign="bottom" style="padding-left:30px;">
+                      <form action="/news/searchresult.asp" method="post" name="searchLeftForm">
+                      <input type="text" name="keyword" style="width:160" class="searchborder" /> 
+                      <input type="image" src="images/search.gif" name="image" class="send" /></form>
+                    </td>
+                  </tr>
+                </table>
+<!--搜索-->
+              </td>
+            </tr>
+          </table>
+        </td>
+        <td valign="top" style="padding-top:10px;">
+          <table width="405" border="0" cellpadding="0" cellspacing="0" align="center">
+            <tr>
+              <td>
+                <img src="images/notices.gif" width="382" height="42" />
+              </td>
+            </tr>
+            <tr>
+              <td style="padding-top:10px;">
+                <table border="0" cellpadding="0" cellspacing="0" style="margin-bottom:15px; margin-left:5px;" width="100%">
+                  <tr>
+                    <td>
+                      <table border="0" cellpadding="0" cellspacing="0" style=" background:url(images/news_line.jpg) no-repeat; margin-left:5px;" height="27" width="380">
+                        <tr>
+                          <td valign="top" height="27" class="news" style="padding-left:5px;">&#160;&#160; 
+                          <a href="/news/Showgg.asp?id=3252" target="_blank" class="news">关于本科生院微信公众平台开通服务的通知</a></td>
+                          <td width="75" align="right" class="news">2014-10-27&#160;</td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <table border="0" cellpadding="0" cellspacing="0" style=" background:url(images/news_line.jpg) no-repeat; margin-left:5px;" height="27" width="380">
+                        <tr>
+                          <td valign="top" height="27" class="news" style="padding-left:5px;">&#160;&#160; 
+                          <a href="/news/Showgg.asp?id=3251" target="_blank" class="news">关于试卷印刷若干问题的提醒</a></td>
+                          <td width="75" align="right" class="news">2014-10-24&#160;</td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <table border="0" cellpadding="0" cellspacing="0" style=" background:url(images/news_line.jpg) no-repeat; margin-left:5px;" height="27" width="380">
+                        <tr>
+                          <td valign="top" height="27" class="news" style="padding-left:5px;">&#160;&#160; 
+                          <a href="/news/Showgg.asp?id=3250" target="_blank" class="news">全校任选课"知识产权"（二区）停课通知</a></td>
+                          <td width="75" align="right" class="news">2014-10-20&#160;</td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <table border="0" cellpadding="0" cellspacing="0" style=" background:url(images/news_line.jpg) no-repeat; margin-left:5px;" height="27" width="380">
+                        <tr>
+                          <td valign="top" height="27" class="news" style="padding-left:5px;">&#160;&#160; 
+                          <a href="/news/Showgg.asp?id=3249" target="_blank" class="news">2015年春季学期本科生专业限选、英语拓展、</a></td>
+                          <td width="75" align="right" class="news">2014-10-20&#160;</td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <table border="0" cellpadding="0" cellspacing="0" style=" background:url(images/news_line.jpg) no-repeat; margin-left:5px;" height="27" width="380">
+                        <tr>
+                          <td valign="top" height="27" class="news" style="padding-left:5px;">&#160;&#160; 
+                          <a href="/news/Showgg.asp?id=3248" target="_blank" class="news">2014年秋季学期本科生乘车优惠卡充值通知</a></td>
+                          <td width="75" align="right" class="news">2014-10-17&#160;</td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <table border="0" cellpadding="0" cellspacing="0" style=" background:url(images/news_line.jpg) no-repeat; margin-left:5px;" height="27" width="380">
+                        <tr>
+                          <td valign="top" height="27" class="news" style="padding-left:5px;">&#160;&#160; 
+                          <a href="/news/Showgg.asp?id=3247" target="_blank" class="news">关于2014级新生上网核对确认教育部学籍电子</a></td>
+                          <td width="75" align="right" class="news">2014-10-15&#160;</td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <table border="0" cellpadding="0" cellspacing="0" style=" background:url(images/news_line.jpg) no-repeat; margin-left:5px;" height="27" width="380">
+                        <tr>
+                          <td valign="top" height="27" class="news" style="padding-left:5px;">&#160;&#160; 
+                          <a href="/news/Showgg.asp?id=3246" target="_blank" class="news">全校任选课"生命的化学"（聂桓）调课通知</a></td>
+                          <td width="75" align="right" class="news">2014-10-9&#160;</td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <table border="0" cellpadding="0" cellspacing="0" style=" background:url(images/news_line.jpg) no-repeat; margin-left:5px;" height="27" width="380">
+                        <tr>
+                          <td valign="top" height="27" class="news" style="padding-left:5px;">&#160;&#160; 
+                          <a href="/news/Showgg.asp?id=3245" target="_blank" class="news">关于10月11日二校区部分课程停课的通知</a></td>
+                          <td width="75" align="right" class="news">2014-10-9&#160;</td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <table border="0" cellpadding="0" cellspacing="0" style=" background:url(images/news_line.jpg) no-repeat; margin-left:5px;" height="27" width="380">
+                        <tr>
+                          <td valign="top" height="27" class="news" style="padding-left:5px;">&#160;&#160; 
+                          <a href="/news/Showgg.asp?id=3244" target="_blank" class="news">关于2014年秋季学期"好大学在线"课程开课</a></td>
+                          <td width="75" align="right" class="news">2014-9-30&#160;</td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <table border="0" cellpadding="0" cellspacing="0" style=" background:url(images/news_line.jpg) no-repeat; margin-left:5px;" height="27" width="380">
+                        <tr>
+                          <td valign="top" height="27" class="news" style="padding-left:5px;">&#160;&#160; 
+                          <a href="/news/Showgg.asp?id=3243" target="_blank" class="news">全校任选课"摄影创作"（冯健）调课通知</a></td>
+                          <td width="75" align="right" class="news">2014-9-26&#160;</td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <table border="0" cellpadding="0" cellspacing="0" style=" background:url(images/news_line.jpg) no-repeat; margin-left:5px;" height="27" width="380">
+                        <tr>
+                          <td valign="top" height="27" class="news" style="padding-left:5px;">&#160;&#160; 
+                          <a href="/news/Showgg.asp?id=3242" target="_blank" class="news">"基础学科拔尖学生培养试验计划"2014级计</a></td>
+                          <td width="75" align="right" class="news">2014-9-26&#160;</td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <table border="0" cellpadding="0" cellspacing="0" style=" background:url(images/news_line.jpg) no-repeat; margin-left:5px;" height="27" width="380">
+                        <tr>
+                          <td valign="top" height="27" class="news" style="padding-left:5px;">&#160;&#160; 
+                          <a href="/news/Showgg.asp?id=3241" target="_blank" class="news">《创新型力学实验》开课师生见面通知</a></td>
+                          <td width="75" align="right" class="news">2014-9-24&#160;</td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <table border="0" cellpadding="0" cellspacing="0" style=" background:url(images/news_line.jpg) no-repeat; margin-left:5px;" height="27" width="380">
+                        <tr>
+                          <td valign="top" height="27" class="news" style="padding-left:5px;">&#160;&#160; 
+                          <a href="/news/Showgg.asp?id=3240" target="_blank" class="news">创新实验课《低功耗嵌入式系统设计与实践》开课</a></td>
+                          <td width="75" align="right" class="news">2014-9-24&#160;</td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <table border="0" cellpadding="0" cellspacing="0" style=" background:url(images/news_line.jpg) no-repeat; margin-left:5px;" height="27" width="380">
+                        <tr>
+                          <td valign="top" height="27" class="news" style="padding-left:5px;">&#160;&#160; 
+                          <a href="/news/Showgg.asp?id=3238" target="_blank" class="news">2014年秋季学期本科生特殊补选课通知</a></td>
+                          <td width="75" align="right" class="news">2014-9-23&#160;</td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <table border="0" cellpadding="0" cellspacing="0" style=" background:url(images/news_line.jpg) no-repeat; margin-left:5px;" height="27" width="380">
+                        <tr>
+                          <td valign="top" height="27" class="news" style="padding-left:5px;">&#160;&#160; 
+                          <a href="/news/Showgg.asp?id=3237" target="_blank" class="news">转发体育部通知：二区体育选课、上课须知</a></td>
+                          <td width="75" align="right" class="news">2014-9-18&#160;</td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="right" style="padding-right:40px; padding-top:10px;">
+                      <a href="/news/sub_tzgg.asp?cataid=A00340009">
+                        <img src="images/more_blue.jpg" width="37" height="10" />
+                      </a>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td align="center">
+                <table border="0" cellpadding="0" cellspacing="0" background="images/quick_bg.png" width="376" height="84">
+                  <tr>
+                    <td style="padding-left:70px;">
+                      <a href="http://xscj.hit.edu.cn/hitjwgl/xs/" target="_blank">
+                        <img src="images/quick_1.png" width="70" height="70" />
+                      </a>
+                    </td>
+                    <td style="padding-left:10px;">
+                      <a href="http://xscj.hit.edu.cn/hitjwgl/teacher/" target="_blank">
+                        <img src="images/quick_2.png" width="70" height="70" />
+                      </a>
+                    </td>
+                    <td style="padding-left:30px;">
+                      <a href="http://xscj.hit.edu.cn/hitjwgl/xtgl/" target="_blank">
+                        <img src="images/quick_3.png" width="70" height="70" />
+                      </a>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+<!--中间栏-->
+        <td valign="top">
+          <table cellpadding="0" cellspacing="0" style="margin-top:10px; border:1px solid #f1f1f1;" width="211" align="center" bgcolor="#FBFAFA">
+            <tr>
+              <td>
+                <table cellspacing="0" cellpadding="0" border="0">
+                  <tr>
+                    <td style=" padding-top:10px;">
+                      <img src="images/special.png" width="211" height="35" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="center" style="padding-top:15px;">
+                      <img src="images/special_1.jpg" width="170" height="62" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="center" style="padding-top:15px;">
+                      <a href="/news/sub_sxq.asp?c_id=A0067">
+                        <img src="images/special_2.jpg" width="170" height="62" />
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="center" style="padding-top:15px; padding-bottom:15px;">
+                      <a href="/news/sub_sjjx.asp?c_id=A0068">
+                        <img src="images/special_3.jpg" width="170" height="62" />
+                      </a>
+                    </td>
+                  </tr>
+                </table>
+<!--专题-->
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <table cellspacing="0" cellpadding="0" border="0">
+                  <tr>
+                    <td style=" padding-top:10px;">
+                      <img src="images/asks.png" width="211" height="35" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="padding-top:10px;">
+                      <table border="0" cellpadding="0" cellspacing="0" style="margin-bottom:15px; margin-left:5px;" width="100%">
+                        <tr>
+                          <td>
+                            <table border="0" cellpadding="0" cellspacing="0" height="27">
+                              <tr>
+                                <td style="padding-left:8px;">
+                                  <img src="images/coin_1.gif" width="7" height="7" />
+                                </td>
+                                <td valign="top" height="27" class="news" width="385" style="padding-left:15px; padding-right:15px;">
+                                  <a href="/news/Showjd.asp?id=3050" target="_blank" class="news">我在校外如何查询成绩？</a>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <table border="0" cellpadding="0" cellspacing="0" height="27">
+                              <tr>
+                                <td style="padding-left:8px;">
+                                  <img src="images/coin_1.gif" width="7" height="7" />
+                                </td>
+                                <td valign="top" height="27" class="news" width="385" style="padding-left:15px; padding-right:15px;">
+                                  <a href="/news/Showjd.asp?id=3042" target="_blank" class="news">为什么我查不到成绩？</a>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <table border="0" cellpadding="0" cellspacing="0" height="27">
+                              <tr>
+                                <td style="padding-left:8px;">
+                                  <img src="images/coin_1.gif" width="7" height="7" />
+                                </td>
+                                <td valign="top" height="27" class="news" width="385" style="padding-left:15px; padding-right:15px;">
+                                  <a href="/news/Showjd.asp?id=3041" target="_blank" class="news">专业限选课不及格如何处理？</a>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <table border="0" cellpadding="0" cellspacing="0" height="27">
+                              <tr>
+                                <td style="padding-left:8px;">
+                                  <img src="images/coin_1.gif" width="7" height="7" />
+                                </td>
+                                <td valign="top" height="27" class="news" width="385" style="padding-left:15px; padding-right:15px;">
+                                  <a href="/news/Showjd.asp?id=3020" target="_blank" class="news">选课错过了怎么办？</a>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <table border="0" cellpadding="0" cellspacing="0" height="27">
+                              <tr>
+                                <td style="padding-left:8px;">
+                                  <img src="images/coin_1.gif" width="7" height="7" />
+                                </td>
+                                <td valign="top" height="27" class="news" width="385" style="padding-left:15px; padding-right:15px;">
+                                  <a href="/news/Showjd.asp?id=3018" target="_blank" class="news">全校任选课不及格有影响吗？</a>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td align="right" style="padding-right:15px; padding-top:10px;">
+                            <a href="/news/sub_wtjd.asp?cataid=A0066">
+                              <img src="images/more_yellow.gif" width="31" height="7" />
+                            </a>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+<!--常见问题-->
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <table cellspacing="0" cellpadding="0" border="0">
+                  <tr>
+                    <td>
+                      <img src="images/links.png" width="211" height="35" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td width="165" align="center" valign="top" style=" padding-left:20px;padding-top:10px; padding-bottom:10px;">
+                      <select style="FONT-SIZE: 9pt;color:666666; WIDTH: 165px; margin:4px 0 0 2px;" onchange="window.open(this.options[this.selectedIndex].value,'_Blank')" size="1" name="select1">
+                        <option value="#" selected="selected">友情链接</option>
+                        <option value="http://xgc.hit.edu.cn/" target="_blank" style="color:#999999">学生工作处</option>
+                        <option value="http://zsb.hit.edu.cn/" target="_blank" style="color:#999999">招生就业处</option>
+                        <option value="http://hitgs.hit.edu.cn/" target="_blank" style="color:#999999">研究生院</option>
+                        <option value="http://student.hit.edu.cn/" target="_blank" style="color:#999999">团委</option>
+                        <option value="http://hituc.hit.edu.cn" target="_blank" style="color:#999999">本科生院</option>
+                      </select>
+                    </td>
+                  </tr>
+                </table>
+<!--友情链接-->
+              </td>
+            </tr>
+          </table>
+<!--右栏-->
+        </td>
+        <td width="50" style="background-image:url(images/bg_right.jpg); background-repeat:repeat-y;"></td>
+      </tr>
+    </table>
+<script type="text/javascript" language="JavaScript">
+
+Date.prototype.getWeek = function(startDate) {
+var onejan = new Date(startDate);
+
+return Math.ceil((((this - onejan) / 86400000) + onejan.getDay()-1)/7);
+}
+
+var plateText = "2014年秋季学期"
+var scoolBeginDate = "2014/09/08"
+
+var now = new Date();
+var weekno = now.getWeek(scoolBeginDate);
+document.getElementById("weekPlate").innerHTML = plateText+" 第"+weekno+"周";
+    </script>
+    <table width="1004" align="center" background="../images/foot.jpg" height="72">
+      <tr>
+        <td align="center" style="color:#3a3a3a">Copyright 2013 (C) 哈尔滨工业大学教务处 技术支持 哈尔滨工业大学网络与信息中心</td>
+      </tr>
+    </table>
+  </body>
+</html>

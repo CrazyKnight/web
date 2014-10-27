@@ -1,0 +1,261 @@
+*******开始解析文档*******
+
+
+[table]
+	属性名称:width 属性值:1004
+	属性名称:cellpadding 属性值:0
+	属性名称:cellspacing 属性值:0
+	属性名称:border 属性值:0
+	属性名称:align 属性值:center
+[table]
+	属性名称:width 属性值:1004
+	属性名称:cellpadding 属性值:0
+	属性名称:cellspacing 属性值:0
+	属性名称:align 属性值:center
+	属性名称:height 属性值:189
+[table]
+	属性名称:height 属性值:46
+	属性名称:border 属性值:0
+	属性名称:cellpadding 属性值:0
+	属性名称:cellspacing 属性值:0
+	属性名称:align 属性值:center
+	属性名称:width 属性值:1004
+	属性名称:background 属性值:../images/menu_bg.gif
+[table]
+	属性名称:cellpadding 属性值:0
+	属性名称:cellspacing 属性值:0
+	属性名称:height 属性值:25
+	属性名称:style 属性值:margin:10px 90px;
+[table]
+	属性名称:width 属性值:1004
+	属性名称:border 属性值:0
+	属性名称:align 属性值:center
+	属性名称:cellpadding 属性值:0
+	属性名称:cellspacing 属性值:0
+	属性名称:style 属性值:padding-top:8px;
+	属性名称:bgcolor 属性值:#FFFFFF
+[table]
+	属性名称:border 属性值:0
+	属性名称:cellpadding 属性值:0
+	属性名称:cellspacing 属性值:0
+[table]
+	属性名称:border 属性值:0
+	属性名称:cellpadding 属性值:0
+	属性名称:cellspacing 属性值:0
+	属性名称:background 属性值:images/block_bg_1.gif
+	属性名称:height 属性值:232
+	属性名称:width 属性值:280
+[table]
+	属性名称:cellpadding 属性值:0
+	属性名称:cellspacing 属性值:0
+	属性名称:border 属性值:0
+	属性名称:width 属性值:100%
+[table]
+	属性名称:border 属性值:0
+	属性名称:cellpadding 属性值:0
+	属性名称:cellspacing 属性值:0
+[table]
+	属性名称:border 属性值:0
+	属性名称:cellpadding 属性值:0
+	属性名称:cellspacing 属性值:0
+[table]
+	属性名称:border 属性值:0
+	属性名称:cellpadding 属性值:0
+	属性名称:cellspacing 属性值:0
+[table]
+	属性名称:border 属性值:0
+	属性名称:cellpadding 属性值:0
+	属性名称:cellspacing 属性值:0
+	属性名称:background 属性值:images/block_bg_1.gif
+	属性名称:height 属性值:232
+	属性名称:width 属性值:280
+[table]
+	属性名称:border 属性值:0
+	属性名称:cellpadding 属性值:0
+	属性名称:cellspacing 属性值:0
+	属性名称:background 属性值:images/block_bg_2.gif
+	属性名称:height 属性值:149
+	属性名称:width 属性值:280
+[table]
+	属性名称:width 属性值:405
+	属性名称:border 属性值:0
+	属性名称:cellpadding 属性值:0
+	属性名称:cellspacing 属性值:0
+	属性名称:align 属性值:center
+[table]
+	属性名称:border 属性值:0
+	属性名称:cellpadding 属性值:0
+	属性名称:cellspacing 属性值:0
+	属性名称:style 属性值:margin-bottom:15px; margin-left:5px;
+	属性名称:width 属性值:100%
+[table]
+	属性名称:border 属性值:0
+	属性名称:cellpadding 属性值:0
+	属性名称:cellspacing 属性值:0
+	属性名称:style 属性值: background:url(images/news_line.jpg) no-repeat; margin-left:5px;
+	属性名称:height 属性值:27
+	属性名称:width 属性值:380
+[table]
+	属性名称:border 属性值:0
+	属性名称:cellpadding 属性值:0
+	属性名称:cellspacing 属性值:0
+	属性名称:style 属性值: background:url(images/news_line.jpg) no-repeat; margin-left:5px;
+	属性名称:height 属性值:27
+	属性名称:width 属性值:380
+[table]
+	属性名称:border 属性值:0
+	属性名称:cellpadding 属性值:0
+	属性名称:cellspacing 属性值:0
+	属性名称:style 属性值: background:url(images/news_line.jpg) no-repeat; margin-left:5px;
+	属性名称:height 属性值:27
+	属性名称:width 属性值:380
+[table]
+	属性名称:border 属性值:0
+	属性名称:cellpadding 属性值:0
+	属性名称:cellspacing 属性值:0
+	属性名称:style 属性值: background:url(images/news_line.jpg) no-repeat; margin-left:5px;
+	属性名称:height 属性值:27
+	属性名称:width 属性值:380
+[table]
+	属性名称:border 属性值:0
+	属性名称:cellpadding 属性值:0
+	属性名称:cellspacing 属性值:0
+	属性名称:style 属性值: background:url(images/news_line.jpg) no-repeat; margin-left:5px;
+	属性名称:height 属性值:27
+	属性名称:width 属性值:380
+[table]
+	属性名称:border 属性值:0
+	属性名称:cellpadding 属性值:0
+	属性名称:cellspacing 属性值:0
+	属性名称:style 属性值: background:url(images/news_line.jpg) no-repeat; margin-left:5px;
+	属性名称:height 属性值:27
+	属性名称:width 属性值:380
+[table]
+	属性名称:border 属性值:0
+	属性名称:cellpadding 属性值:0
+	属性名称:cellspacing 属性值:0
+	属性名称:style 属性值: background:url(images/news_line.jpg) no-repeat; margin-left:5px;
+	属性名称:height 属性值:27
+	属性名称:width 属性值:380
+[table]
+	属性名称:border 属性值:0
+	属性名称:cellpadding 属性值:0
+	属性名称:cellspacing 属性值:0
+	属性名称:style 属性值: background:url(images/news_line.jpg) no-repeat; margin-left:5px;
+	属性名称:height 属性值:27
+	属性名称:width 属性值:380
+[table]
+	属性名称:border 属性值:0
+	属性名称:cellpadding 属性值:0
+	属性名称:cellspacing 属性值:0
+	属性名称:style 属性值: background:url(images/news_line.jpg) no-repeat; margin-left:5px;
+	属性名称:height 属性值:27
+	属性名称:width 属性值:380
+[table]
+	属性名称:border 属性值:0
+	属性名称:cellpadding 属性值:0
+	属性名称:cellspacing 属性值:0
+	属性名称:style 属性值: background:url(images/news_line.jpg) no-repeat; margin-left:5px;
+	属性名称:height 属性值:27
+	属性名称:width 属性值:380
+[table]
+	属性名称:border 属性值:0
+	属性名称:cellpadding 属性值:0
+	属性名称:cellspacing 属性值:0
+	属性名称:style 属性值: background:url(images/news_line.jpg) no-repeat; margin-left:5px;
+	属性名称:height 属性值:27
+	属性名称:width 属性值:380
+[table]
+	属性名称:border 属性值:0
+	属性名称:cellpadding 属性值:0
+	属性名称:cellspacing 属性值:0
+	属性名称:style 属性值: background:url(images/news_line.jpg) no-repeat; margin-left:5px;
+	属性名称:height 属性值:27
+	属性名称:width 属性值:380
+[table]
+	属性名称:border 属性值:0
+	属性名称:cellpadding 属性值:0
+	属性名称:cellspacing 属性值:0
+	属性名称:style 属性值: background:url(images/news_line.jpg) no-repeat; margin-left:5px;
+	属性名称:height 属性值:27
+	属性名称:width 属性值:380
+[table]
+	属性名称:border 属性值:0
+	属性名称:cellpadding 属性值:0
+	属性名称:cellspacing 属性值:0
+	属性名称:style 属性值: background:url(images/news_line.jpg) no-repeat; margin-left:5px;
+	属性名称:height 属性值:27
+	属性名称:width 属性值:380
+[table]
+	属性名称:border 属性值:0
+	属性名称:cellpadding 属性值:0
+	属性名称:cellspacing 属性值:0
+	属性名称:style 属性值: background:url(images/news_line.jpg) no-repeat; margin-left:5px;
+	属性名称:height 属性值:27
+	属性名称:width 属性值:380
+[table]
+	属性名称:border 属性值:0
+	属性名称:cellpadding 属性值:0
+	属性名称:cellspacing 属性值:0
+	属性名称:background 属性值:images/quick_bg.png
+	属性名称:width 属性值:376
+	属性名称:height 属性值:84
+[table]
+	属性名称:cellpadding 属性值:0
+	属性名称:cellspacing 属性值:0
+	属性名称:style 属性值:margin-top:10px; border:1px solid #f1f1f1;
+	属性名称:width 属性值:211
+	属性名称:align 属性值:center
+	属性名称:bgcolor 属性值:#FBFAFA
+[table]
+	属性名称:cellspacing 属性值:0
+	属性名称:cellpadding 属性值:0
+	属性名称:border 属性值:0
+[table]
+	属性名称:cellspacing 属性值:0
+	属性名称:cellpadding 属性值:0
+	属性名称:border 属性值:0
+[table]
+	属性名称:border 属性值:0
+	属性名称:cellpadding 属性值:0
+	属性名称:cellspacing 属性值:0
+	属性名称:style 属性值:margin-bottom:15px; margin-left:5px;
+	属性名称:width 属性值:100%
+[table]
+	属性名称:border 属性值:0
+	属性名称:cellpadding 属性值:0
+	属性名称:cellspacing 属性值:0
+	属性名称:height 属性值:27
+[table]
+	属性名称:border 属性值:0
+	属性名称:cellpadding 属性值:0
+	属性名称:cellspacing 属性值:0
+	属性名称:height 属性值:27
+[table]
+	属性名称:border 属性值:0
+	属性名称:cellpadding 属性值:0
+	属性名称:cellspacing 属性值:0
+	属性名称:height 属性值:27
+[table]
+	属性名称:border 属性值:0
+	属性名称:cellpadding 属性值:0
+	属性名称:cellspacing 属性值:0
+	属性名称:height 属性值:27
+[table]
+	属性名称:border 属性值:0
+	属性名称:cellpadding 属性值:0
+	属性名称:cellspacing 属性值:0
+	属性名称:height 属性值:27
+[table]
+	属性名称:cellspacing 属性值:0
+	属性名称:cellpadding 属性值:0
+	属性名称:border 属性值:0
+[table]
+	属性名称:width 属性值:1004
+	属性名称:align 属性值:center
+	属性名称:background 属性值:../images/foot.jpg
+	属性名称:height 属性值:72
+
+
+
+*******解析文档结束*******
