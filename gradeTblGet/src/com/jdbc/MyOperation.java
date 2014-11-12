@@ -22,7 +22,7 @@ public class MyOperation {
 			pstmt.setString(7,L.getTime());
 			pstmt.setString(8,L.getMyPoint());
 			pstmt.setString(9,L.getGradeKind());
-			pstmt.setString(10,L.getRemark());
+			pstmt.setString(10,L.getInfo());
 			pstmt.executeUpdate();
 		} catch (Exception e) {
 			e.printStackTrace();

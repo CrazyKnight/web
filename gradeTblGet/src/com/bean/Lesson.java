@@ -10,8 +10,8 @@ public class Lesson {
 	private String time;
 	private String myPoint;
 	private String gradeKind;
-	private String remark;
-
+	private String info;
+//
 	public String getTerm() {
 		return term;
 	}
@@ -84,13 +84,12 @@ public class Lesson {
 		this.gradeKind = gradeKind;
 	}
 
-    public String getRemark() {
-        return remark;
-    }
+	public String getInfo() {
+		return info;
+	}
 
-    public void setRemark(String remark) {
-        this.remark = remark;
-    }
-
+	public void setInfo(String info) {
+		this.info = info;
+	}
 
 }
