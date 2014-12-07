@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	<package name="default" namespace="/" extends="struts-default">
+    <default-action-ref name="default"></default-action-ref>
+        <action name="default">
+            <result>welcome.jsp</result>
+        </action>
+		<action name="fileinput" class="com.action.solve" method="execute">
+			<result name="failure">failure.jsp</result>
+			<result name="1">/showTable1.jsp</result>
+			<result name="2">/showTaoBao.jsp</result>
+			<result name="3">/showZfb.jsp</result>
+			<result name="4">/showTable4.jsp</result>
+			<result name="5">/showDB.jsp</result>
+			<result name="6">/showTable6.jsp</result>
+			<result name="7">/showMusic.jsp</result>
+			<result name="8">/showTable8.jsp</result>
+			<result name="9">/showMovie.jsp</result>
+			<result name="10">/showTable10.jsp</result>
+		</action>
+		<action name="DeleteTB" class="com.TaoBaoOpera.DeleteTB" method="execute">
+		<result name="success">/showTaoBao.jsp</result>
+		</action>
+		<action name="DeleteZfb" class="com.zfbOpera.DeleteZfb" method="execute">
+		<result name="success">/showZfb.jsp</result>
+		</action>
+		<action name="DeleteDB" class="com.dbOpera.DeleteDB" method="execute">
+		<result name="success">/showDB.jsp</result>
+		</action>
+		<action name="DeleteMusic" class="com.MusicOpera.DeleteMusic" method="execute">
+		<result name="success">/showMusic.jsp</result>
+		</action>
+		<action name="DeleteMovie" class="com.MovieOpera.DeleteMovie" method="execute">
+		<result name="success">/showMovie.jsp</result>
+		</action>
+		
+		<action name="delete1" class="com.table1.action.ActionTable1"
+            method="delete">
+            <result>showTable1.jsp</result>
+        </action>
+        <action name="add1" class="com.table1.action.ActionTable1"
+            method="add">
+            <result>addTable1.jsp</result>
+            <result name="failure">addTable1.jsp</result>
+        </action>
+        <action name="show1" class="com.table1.action.ActionTable1"
+            method="show">
+            <result>showTable1.jsp</result>
+        </action>
+        <action name="update1" class="com.table1.action.ActionTable1"
+            method="update">
+            <result>updateTable1.jsp</result>
+            <result name="failure">updateTable1.jsp</result>
+        </action>
+
+        <action name="show4" class="com.table4.action.ActionTable4"
+            method="show">
+            <result>showTable4.jsp</result>
+        </action>
+        <action name="add4" class="com.table4.action.ActionTable4"
+            method="add">
+            <result>addTable4.jsp</result>
+            <result name="failure">addTable4.jsp</result>
+        </action>
+        <action name="delete4" class="com.table4.action.ActionTable4"
+            method="delete">
+            <result>showTable4.jsp</result>
+        </action>
+        
+        <action name="show6" class="com.table6.action.ActionTable6"
+            method="show">
+            <result>showTable6.jsp</result>
+        </action>
+        <action name="add6" class="com.table6.action.ActionTable6"
+            method="add">
+            <result>addTable6.jsp</result>
+            <result name="failure">addTable6.jsp</result>
+        </action>
+        <action name="delete6" class="com.table6.action.ActionTable6"
+            method="delete">
+            <result>showTable6.jsp</result>
+        </action>
+        
+        <action name="show8" class="com.table8.action.ActionTable8"
+            method="show">
+            <result>showTable8.jsp</result>
+        </action>
+        <action name="add8" class="com.table8.action.ActionTable8"
+            method="add">
+            <result>addTable8.jsp</result>
+            <result name="failure">addTable8.jsp</result>
+        </action>
+        <action name="delete8" class="com.table8.action.ActionTable8"
+            method="delete">
+            <result>showTable8.jsp</result>
+        </action>
+        
+        <action name="show10" class="com.table10.action.ActionTable10"
+            method="show">
+            <result>showTable10.jsp</result>
+        </action>
+        <action name="add10" class="com.table10.action.ActionTable10"
+            method="add">
+            <result>addTable10.jsp</result>
+            <result name="failure">addTable10.jsp</result>
+        </action>
+        <action name="delete10" class="com.table10.action.ActionTable10"
+            method="delete">
+            <result>showTable10.jsp</result>
+        </action>
+	
+		
+	</package>
+</struts>

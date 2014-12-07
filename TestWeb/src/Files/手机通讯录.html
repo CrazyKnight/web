@@ -1,0 +1,3310 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+
+	<title>中国电信网上营业厅·黑龙江|为您提供电信业务办理、充值交费、费用查询等全方位电子自助服务</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+	<link href="/service/css/jxcard.css"
+		rel="stylesheet" type="text/css">
+	
+	<link href="/service/css/style.css" rel="stylesheet" type="text/css">
+	<link type="text/css" rel="stylesheet" href="/service/css/step.css" />
+	<script language="JavaScript" src="js/calendar.js"></script>
+<script language="JavaScript" src="js/jquery.blockUI.js"></script>	
+	<script language="javascript" src="js/trmouse.js"></script>
+	<SCRIPT language="JavaScript" src="js/lib.js"></SCRIPT>
+	<SCRIPT language="javascript" src="/service/js/TableSorterV2.js"></SCRIPT>
+    <SCRIPT language="JavaScript1.2" src="/service/js/jquery.js"></SCRIPT>
+	<SCRIPT LANGUAGE=JAVASCRIPT>
+	 var totalRecordNum = 88;
+ var perPageRecordNum =30;
+ var $j = jQuery.noConflict();
+var ikk = 0 ;
+          var IsRoot = "cnet";
+    </SCRIPT>
+
+	
+	<STYLE>
+.comtitle {
+	FONT-WEIGHT: bold; FONT-SIZE: 150%; COLOR: #ff6600
+}
+.sort-table THEAD {
+	BACKGROUND: buttonface
+}
+.sort-table THEAD TD {
+	BORDER-RIGHT: buttonshadow 1px solid; BORDER-TOP: buttonhighlight 1px solid; BORDER-LEFT: buttonhighlight 1px solid; CURSOR: default; BORDER-BOTTOM: buttonshadow 1px solid
+}
+.sort-table THEAD TD:active {
+	PADDING-RIGHT: 4px; PADDING-LEFT: 6px; BORDER-LEFT-COLOR: buttonshadow; BORDER-BOTTOM-COLOR: buttonhighlight; PADDING-BOTTOM: 1px; BORDER-TOP-COLOR: buttonshadow; PADDING-TOP: 3px; BORDER-RIGHT-COLOR: buttonhighlight
+}
+.descending {
+	BACKGROUND-IMAGE: url(images/downsimple.png)
+}
+.ascending {
+	BACKGROUND-IMAGE: url(images/upsimple.png)
+}
+</STYLE>
+</head>
+
+<script language="JavaScript">	
+function saveExcel(){	
+	document.excelform.submit();
+}
+</script>
+<body style="margin:0" onLoad="javascript:initialPageShow();">
+<!--登录页面_头部 begin -->
+	<div class="step_pagewidth2 step_head"><img src="/service/images/step/step_top.jpg" width="1000" height="6"  /></div>
+	<!--登录页面_头部_导航 begin-->
+	<div class="step_banner1 step_pagewidth2">
+
+	 
+		
+		
+			<div class="step_banner_body1 step_banner_bgP">
+				<ul> <li class="step_banner_hoverC">市话详单查询</li> </ul>
+			</div>
+		
+		
+		
+		
+		
+		
+		
+		
+   
+	</div>
+	<!--登录页面_头部_导航 end-->
+	<!--登录页面_头部样式 end -->
+	
+<div class="step_pagewidth2 step_pagebody1">
+
+
+ 	<table width="99%" border="0" align="center" cellpadding="0"
+		cellspacing="0">
+		<tr>
+			<td width="1" bgcolor="e5e5e5"></td>
+			<td height="1" bgcolor="e5e5e5"></td>
+			<td width="1" bgcolor="e5e5e5"></td>
+		</tr>
+		<tr>
+			<td width="1" bgcolor="e5e5e5"></td>
+			<td>
+				<table width="100%" border="0" align="center" cellpadding="0"
+					cellspacing="0">
+					<tr>
+						
+						<td width="100%" valign="top">
+							<table width="100%" border="0" cellspacing="0" cellpadding="0"
+								align="center">
+								<tr>
+									<td bgcolor="#FFFFFF">
+										<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+
+											<tr>
+												<td>
+													<table width="100%" border="0" cellspacing="0"
+														cellpadding="0">
+														
+														<tr>
+															<td height=10></td>
+														</tr>
+														<tr>
+															<td>
+															<form name="CqdQueryForm" method="post" action="/hljct/cqd/queryDetailList.do">
+																<table width="100%" border="0" cellpadding="3" cellspacing="1">
+																	<tr bgcolor="#e5e5e5">
+																		
+																		<td align="right" bgcolor="#ffffff" width=90>
+																			总记录数:
+																		</td>
+																		<td align="left" bgcolor="#ffffff">
+																			88
+																		</td>
+																		<td align="right" bgcolor="#ffffff" width=90>
+																			
+																		</td>
+																		<td align="left" bgcolor="#ffffff">
+																		
+																		</td>
+																		 <td align="left" bgcolor="#ffffff">
+																        	<input type="button" class="orangebtn_s" value="关 闭" onclick="top.window.close()" />
+																        	<input type="button" class="orangebtn_s" value="下载" onclick="saveExcel()" />
+																         </td>
+																	</tr>
+																</table>
+
+																<table id="tb1"  width="100%" border="0" cellpadding="1" cellspacing="1" bgcolor="#e5e5e5" class="sort-table">
+
+																	<thead align="center">
+																		<tr>
+																			 <td width="3%" align="center" >序号</td>    
+											                                     
+											                                    <td width="6%" align="center">主叫号码  </td>   
+																			  
+											                                      <td width="6%" align="center">对端位置计费区号</td>
+											                                  
+											                                    <td width="6%" align="center">被叫号码</td>
+											                                     
+											                                    <td width="6%" align="center">开始时间</td>
+											                                    <td width="4%" align="center">时长</td> 
+											                                    <!--<td width="4%" align="center">时长</td>  -->    
+											                                    <!-- <td width="9%" align="center">话单类型</td>  -->
+											                                    <td width="4%" align="center">费用(分)</td> 
+											                                     
+											                                    <td width="4%" align="center">呼叫方式</td> 
+											                                       
+											                                    <td width="4%" align="center">附加费(分)</td> 
+											                                     
+											                      				 
+											                                  
+											                                  
+																		</tr>
+																	</thead>
+																		
+										                                  
+										                                   
+										                                   <tr  id="row1" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">1</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0756</td>
+																				
+																				<td bgcolor="#ffffff" align="center">18928010882</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141001105158);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">11秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">非漫游接听C网事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">被叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row2" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">2</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">13945077446</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141005124353);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">17秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">非漫游接听移动事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">被叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row3" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">3</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">13945077446</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141005124738);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">34秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">主叫非漫游直拨本地移动事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">主叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row4" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">4</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">13304658925</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141005210202);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">205秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">非漫游接听C网事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">被叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row5" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">5</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">18245030402</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141007172810);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">162秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">主叫非漫游直拨本地移动事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">主叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row6" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">6</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">18245030402</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141007213651);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">39秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">主叫非漫游直拨本地移动事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">主叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row7" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">7</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">13304658925</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141007213837);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">40秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">非漫游接听C网事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">被叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row8" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">8</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">13304658925</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141007214639);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">19秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">非漫游接听C网事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">被叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row9" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">9</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">15104525458</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141007214830);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">12秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">主叫非漫游直拨本地移动事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">主叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row10" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">10</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">86413388</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141008153156);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">68秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">非漫游接听网通事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">被叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row11" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">11</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">18245030402</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141008203610);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">88秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">主叫非漫游直拨本地移动事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">主叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row12" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">12</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">13304658925</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141008224026);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">125秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">非漫游接听C网事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">被叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row13" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">13</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">13304658925</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141009124536);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">234秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">主叫非漫游直拨本地C网事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">主叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row14" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">14</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">13039970935</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141009175623);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">17秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">主叫非漫游本地拨打联通G网事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">主叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row15" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">15</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">045186210545</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141010115831);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">43秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">主叫非漫游本地拨打联通G网事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">主叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row16" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">16</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">13946082249</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141010120110);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">11秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">非漫游接听移动事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">被叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row17" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">17</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">4001893040</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141010164659);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">6秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">主叫非漫游直拨本地电信固网事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">主叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row18" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">18</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0755</td>
+																				
+																				<td bgcolor="#ffffff" align="center">18682060102</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141010214823);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">1007秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">非漫游接听联通G网事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">被叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row19" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">19</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">13039970935</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141011151411);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">108秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">非漫游接听联通G网事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">被叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row20" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">20</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">15636815169</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141011151628);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">82秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">主叫非漫游本地拨打联通G网事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">主叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row21" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">21</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">15636815169</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141012154459);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">40秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">主叫非漫游本地拨打联通G网事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">主叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row22" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">22</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">18045172978</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141012165330);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">106秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">主叫非漫游直拨本地C网事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">主叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row23" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">23</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">15636815169</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141012165716);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">73秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">主叫非漫游本地拨打联通G网事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">主叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row24" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">24</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">15636815169</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141012173141);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">14秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">主叫非漫游本地拨打联通G网事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">主叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row25" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">25</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">15046672407</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141012182211);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">57秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">非漫游接听移动事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">被叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row26" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">26</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">15636815169</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141013141718);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">42秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">主叫非漫游本地拨打联通G网事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">主叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row27" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">27</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">15636815169</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141013143451);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">109秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">非漫游接听联通G网事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">被叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row28" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">28</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">15636815169</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141013152955);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">20秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">非漫游接听联通G网事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">被叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row29" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">29</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">15636815169</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141013153917);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">10秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">非漫游接听联通G网事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">被叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row30" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">30</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">15636815169</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141013172819);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">52秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">非漫游接听联通G网事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">被叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row31" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">31</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">13304658925</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141013174354);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">137秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">非漫游接听C网事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">被叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row32" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">32</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">15046672407</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141013195349);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">73秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">非漫游接听移动事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">被叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row33" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">33</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">15636815169</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141014165326);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">17秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">非漫游接听联通G网事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">被叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row34" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">34</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">15636815169</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141014165949);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">13秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">非漫游接听联通G网事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">被叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row35" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">35</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">15636815169</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141014194501);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">31秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">非漫游接听联通G网事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">被叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row36" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">36</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >010</td>
+																				
+																				<td bgcolor="#ffffff" align="center">15652135196</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141016203349);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">531秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">非漫游接听联通G网事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">被叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row37" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">37</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">15104525458</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141017144259);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">15秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">非漫游接听移动事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">被叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row38" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">38</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">15545196760</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141017153246);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">69秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">主叫非漫游本地拨打联通G网事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">主叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row39" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">39</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">13304658925</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141017171741);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">20秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">非漫游接听C网事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">被叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row40" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">40</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >010</td>
+																				
+																				<td bgcolor="#ffffff" align="center">13126874016</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141018114147);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">151秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">非漫游接听联通G网事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">被叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row41" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">41</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">18245030402</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141018163218);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">109秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">主叫非漫游直拨本地移动事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">主叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row42" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">42</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">15204651220</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141019082246);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">68秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">主叫非漫游直拨本地移动事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">主叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row43" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">43</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">13304658925</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141019091013);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">256秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">非漫游接听C网事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">被叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row44" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">44</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">18245030402</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141019091519);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">36秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">主叫非漫游直拨本地移动事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">主叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row45" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">45</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">18245030402</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141019142114);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">24秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">主叫非漫游直拨本地移动事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">主叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row46" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">46</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">18245030402</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141019143843);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">41秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">非漫游接听移动事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">被叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row47" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">47</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >010</td>
+																				
+																				<td bgcolor="#ffffff" align="center">118100</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141019162146);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">8秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">非漫游被叫普通</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">被叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row48" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">48</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">18704505109</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141019163209);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">162秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">非漫游接听移动事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">被叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row49" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">49</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">18245046296</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141019193614);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">258秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">主叫非漫游直拨本地移动事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">主叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row50" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">50</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">15204651220</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141019200835);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">62秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">主叫非漫游直拨本地移动事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">主叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row51" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">51</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">18704505109</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141019201820);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">48秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">主叫非漫游直拨本地移动事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">主叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row52" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">52</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">18245030402</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141020090134);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">104秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">非漫游接听移动事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">被叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row53" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">53</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">13304658925</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141020102310);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">9秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">主叫非漫游直拨本地C网事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">主叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row54" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">54</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">13304658925</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141020183735);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">16秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">非漫游接听C网事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">被叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row55" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">55</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">13304658925</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141020220040);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">455秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">非漫游接听C网事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">被叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row56" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">56</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">18245046296</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141021124755);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">27秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">非漫游接听移动事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">被叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row57" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">57</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">18245046296</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141021130858);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">36秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">非漫游接听移动事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">被叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row58" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">58</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">13304658925</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141021163749);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">65秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">非漫游接听C网事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">被叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row59" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">59</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">18704505109</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141021194854);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">26秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">非漫游接听移动事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">被叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row60" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">60</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">13304658925</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141021210314);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">36秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">非漫游接听C网事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">被叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row61" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">61</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0370</td>
+																				
+																				<td bgcolor="#ffffff" align="center">18737097921</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141022202340);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">556秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">非漫游接听移动事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">被叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row62" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">62</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">18204619355</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141023171811);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">163秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">非漫游接听移动事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">被叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row63" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">63</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">15204651220</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141023182332);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">35秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">非漫游接听移动事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">被叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row64" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">64</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">13304658925</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141023192600);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">30秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">主叫非漫游直拨本地C网事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">主叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row65" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">65</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">13304658925</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141023192718);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">16秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">主叫非漫游直拨本地C网事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">主叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row66" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">66</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0370</td>
+																				
+																				<td bgcolor="#ffffff" align="center">18737097921</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141023220639);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">129秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">非漫游接听移动事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">被叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row67" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">67</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">86414208</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141024122617);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">36秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">非漫游接听网通事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">被叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row68" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">68</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">15204651220</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141024141517);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">56秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">非漫游接听移动事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">被叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row69" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">69</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">13304658925</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141024141703);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">18秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">主叫非漫游直拨本地C网事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">主叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row70" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">70</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">18245030402</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141024153516);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">64秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">非漫游接听移动事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">被叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row71" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">71</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">18245030402</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141024222418);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">75秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">主叫非漫游直拨本地移动事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">主叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row72" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">72</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">13039970935</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141025123700);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">63秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">非漫游接听联通G网事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">被叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row73" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">73</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">15636815169</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141025173116);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">16秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">非漫游接听联通G网事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">被叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row74" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">74</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">15636815169</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141025173146);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">112秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">主叫非漫游本地拨打联通G网事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">主叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row75" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">75</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">15636815169</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141025180150);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">12秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">非漫游接听联通G网事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">被叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row76" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">76</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">18603669329</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141026160302);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">21秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">主叫非漫游本地拨打联通G网事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">主叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row77" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">77</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">045186418203</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141026161031);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">16秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">主叫非漫游直拨本地网通事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">主叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row78" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">78</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">13304658925</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141026212322);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">306秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">非漫游接听C网事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">被叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row79" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">79</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">13304658925</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141026212845);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">249秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">非漫游接听C网事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">被叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row80" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">80</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">4001001297</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141027093656);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">133秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">非漫游被叫普通</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">被叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row81" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">81</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">13304658925</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141027164830);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">96秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">非漫游接听C网事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">被叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row82" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">82</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">15046672407</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141028185647);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">145秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">主叫非漫游直拨本地移动事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">主叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row83" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">83</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">15204651220</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141028191207);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">127秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">非漫游接听移动事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">被叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row84" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">84</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">18245030402</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141029095532);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">77秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">主叫非漫游直拨本地移动事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">主叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row85" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">85</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">13339307363</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141031125518);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">12秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">主叫非漫游直拨本地C网事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">主叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row86" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">86</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">15204651220</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141031130033);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">49秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">主叫非漫游直拨本地移动事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">主叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row87" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">87</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">15204651220</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141031155301);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">24秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">主叫非漫游直拨本地移动事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">主叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                   <tr  id="row88" style="display:none"> 
+												                                <td bgcolor="#ffffff" align="center">88</td>   
+										                                   		  
+																				<td bgcolor="#ffffff" align="center">18946031283 </td>  
+																				
+																				<td bgcolor="ffffff" align="center" >0451</td>
+																				
+																				<td bgcolor="#ffffff" align="center">15114596840</td>
+																				
+																				  <script>
+																				  	var begtime = new String(20141031214607);
+																				  	var fmtyear = begtime.substr(0,4);
+																				  	var fmtmonth = begtime.substr(4,2);
+																				  	var fmtdate = begtime.substr(6,2);
+																				  	var fmthh = begtime.substr(8,2);
+																				  	var fmtmm = begtime.substr(10,2);
+																				  	var fmtss = begtime.substr(12,2);
+																				  </script>   
+																				<td bgcolor="#ffffff" align="center"><script>document.write(fmtyear);document.write("-");document.write(fmtmonth);document.write("-");document.write(fmtdate);document.write(" ");document.write(fmthh);document.write(":");document.write(fmtmm);document.write(":");document.write(fmtss);</script></td> 
+																				<td bgcolor="#ffffff" align="center">24秒</td> 
+																				 <!--<td bgcolor="#ffffff" align="center">非漫游接听移动事件</td>   -->  
+																				<td bgcolor="#ffffff" align="center">0</td> 
+																				
+																				<td bgcolor="#ffffff" align="center">被叫</td> 
+																				 
+																				<td bgcolor="#ffffff" align="center">0</td>    
+											                                    
+											                                    
+											                                	
+											                                	
+											                                 </tr>
+										                                     
+										                                  
+										                                  
+										                                 
+																	
+<script language="javascript">
+<!--
+//全局变量
+
+var currentPageNumber = 0;//当前页号
+var lastPageNumber;
+var totalRecordNum;
+if(totalRecordNum==0)
+{
+	currentPageNumber = 0;
+}
+//计算总页数
+var totalPageNumber = Math.ceil(totalRecordNum/perPageRecordNum);
+//if(totalRecordNum%perPageRecordNum!=0)//如果除不尽
+//{
+	//+1并去掉小数
+	//totalPageNumber = Math.ceil(x);
+//}
+var startShowPage ;//开始显示页记录号数
+var endShowPage ;//结束显示页记录号数
+
+function keyDown() {
+  if(event.keyCode == 13){
+    goToPage();
+  }
+}
+//跳到指定页
+function goToPage()
+{
+   if(totalRecordNum != 0)
+   {
+        lastPageNumber = currentPageNumber;
+		//var pageNo = document.formTurnPage.curPageNo.value;
+		var pageNo =document.getElementById("curPageNo").value;
+		//校验页号
+		if((/[^0-9]/gi.test(pageNo)) | pageNo.length==0)
+	    {
+			alert("页数必须为数字!");
+			return;
+	    }
+	    else
+	    {
+	       if((pageNo > totalPageNumber)|(pageNo < 1))
+	      {
+	        alert("您所输入的页数超出范围！");
+			return;
+	      }
+	    }
+		//跳转到指定页
+		 startShowPage = (pageNo-1)*perPageRecordNum;
+		 endShowPage  = pageNo*perPageRecordNum;
+		 currentPageNumber = parseInt(pageNo);
+		 exeShowPage(); 
+		 //curPageNo.innerHTML = currentPageNumber;
+		 //document.all.curPageNo.value=currentPageNumber;
+		 //totalPageNo.innerHTML = totalPageNumber;	
+	}
+	else
+	{
+		//alert("没有查询到相关结果!");
+	}
+}
+//跳转到第一页
+function goToFirstPage()
+{
+   if (currentPageNumber == 1) {
+     return;
+   }
+   if(totalRecordNum != 0)
+   {
+        lastPageNumber = currentPageNumber;
+		startShowPage = 0*perPageRecordNum;
+		endShowPage  = 1*perPageRecordNum;
+		currentPageNumber = 1;
+		exeShowPage(); 
+		//curPageNo.innerHTML = currentPageNumber;
+		
+		document.getElementById("curPageNo").value = "1";
+		//document.formTurnPage.curPageNo.value = "1";
+		//totalPageNo.innerHTML = totalPageNumber;
+	}
+	else
+	{
+		//alert("没有查询到相关结果!");
+	}
+
+}
+function goToLastPage()
+{
+   if (currentPageNumber == totalPageNumber) {
+     return;
+   }
+   if(totalRecordNum != 0)
+   {
+        lastPageNumber = currentPageNumber;
+		if(totalRecordNum%perPageRecordNum==0)//除尽
+		{
+			var tempVal = totalRecordNum/perPageRecordNum;
+		  	startShowPage = (tempVal-1)*perPageRecordNum;
+		 	endShowPage  = tempVal*perPageRecordNum;
+		}
+		else
+		{	
+			  var tempVal = totalRecordNum%perPageRecordNum;//得到余数,就是最后一页要显示的记录条数
+			  startShowPage = totalRecordNum-tempVal;
+		 	  endShowPage  = totalRecordNum;
+		}
+		currentPageNumber=totalPageNumber;
+		exeShowPage();	
+		//curPageNo.innerHTML = currentPageNumber;
+		//document.formTurnPage.curPageNo.value = currentPageNumber;
+		document.getElementById("curPageNo").value = currentPageNumber;
+		//totalPageNo.innerHTML = totalPageNumber;
+	}
+	else
+	{
+		//alert("没有查询到相关结果!");
+	}
+
+}
+function goToNextPage()
+{
+   if(totalRecordNum != 0)
+   {
+	   if(currentPageNumber< totalPageNumber)
+	   {
+	        lastPageNumber = currentPageNumber;
+			currentPageNumber = currentPageNumber+1
+			startShowPage = (currentPageNumber-1)*perPageRecordNum;
+			endShowPage  = currentPageNumber*perPageRecordNum;
+			exeShowPage();
+			//curPageNo.innerHTML = currentPageNumber;
+			document.getElementById("curPageNo").value = currentPageNumber;
+			//document.formTurnPage.curPageNo.value = currentPageNumber;
+			//totalPageNo.innerHTML = totalPageNumber;
+		}
+		else
+		{
+			alert("当前页已经是最后一页了!");
+		}	
+	}
+	else
+	{
+		//alert("没有查询到相关结果!");
+	}
+}
+function goToBeforePage()
+{
+   if(totalRecordNum != 0)
+   {
+     if(currentPageNumber>1)
+     {
+            lastPageNumber = currentPageNumber;
+			currentPageNumber = currentPageNumber-1;
+			startShowPage = (currentPageNumber-1)*perPageRecordNum;
+			endShowPage  = currentPageNumber*perPageRecordNum;
+			exeShowPage();	
+			//curPageNo.innerHTML = currentPageNumber;
+			document.getElementById("curPageNo").value = currentPageNumber;
+			//totalPageNo.innerHTML = totalPageNumber;
+		}
+		else
+		{
+			alert("当前页已经是第一页了!");
+		}	
+	}
+	else
+	{
+		//alert("没有查询到相关结果!");
+	}
+}
+
+function exeShowPage()
+{
+     if (currentPageNumber == lastPageNumber) {
+       return;
+     }
+	 for (var i=startShowPage+1; i<=endShowPage; i++) {
+	   if (i <= totalRecordNum) {
+	     document.getElementById("row"+i).style.display="";
+	   }
+	 }
+	 if (lastPageNumber > 0) {
+	   for (var i=(lastPageNumber-1)*perPageRecordNum+1; i<=lastPageNumber*perPageRecordNum; i++) {
+	     if (i <= totalRecordNum) {
+		   document.getElementById("row"+i).style.display="none";
+	     }
+	   }
+	 }
+}
+
+function initialPageShow()
+{
+	//有查询结果
+   if(totalRecordNum != 0)
+   {
+		goToFirstPage();//显示第一页
+	}
+	//显示页号信息
+	//curPageNo.innerHTML = currentPageNumber;
+	//document.a.elements["b"].value=currentPageNumber
+	totalPageNo.innerHTML = totalPageNumber;
+}
+//-->
+</script>
+<table border="0" cellpadding="3" cellspacing="3" align="center">
+  <tr><form name="formTurnPage" id="formTurnPage" onSubmit="return false;">
+    <td valign="middle"><a onClick="javascript:goToFirstPage();" style="cursor:hand;"><img src="/service/images/page_top.gif" width="9" height="9" border="0"></a></td>
+    <td height="30" valign="middle"> <div align="left"><a onClick="javascript:goToFirstPage();" style="cursor:hand;" class="style1">第一页</a></div></td>
+    <td valign="middle"><a onClick="javascript:goToBeforePage();" style="cursor:hand;"><img src="/service/images/page_prev.gif" width="9" height="9" border="0"></a></td>
+    <td valign="middle"><div align="left"><a onClick="javascript:goToBeforePage();" style="cursor:hand;" class="style1">上一页</a></div></td>
+    <td  valign="middle">
+         当前第</td><td  valign="middle"><input type="text" name="curPageNo" value="1" size="3" height="10" onkeydown="javascript:keyDown();" /></td><td  valign="middle">页/总计<span id="totalPageNo"></span>页
+   </td>
+    <td valign="middle"><div align="right"><a onClick="javascript:goToNextPage();" style="cursor:hand;" class="style1">下一页</a></div></td>
+    <td valign="middle"><div align="center"><a onClick="javascript:goToNextPage();" style="cursor:hand;"><img src="/service/images/page_next.gif" width="9" height="9"></a></div></td>
+    <td valign="middle"><div align="right"><a onClick="javascript:goToLastPage();" style="cursor:hand;" class="style1">最后一页</a></div></td>
+    <td valign="middle"><div align="center"><a onClick="javascript:goToLastPage();" style="cursor:hand;"><img src="/service/images/page_end.gif" width="9" height="9" border="0"></a></div></td>
+    </form>
+  </tr>
+</table>
+
+																</table>
+																</form>
+																<form action="/service/detailListExcel.do?method=exportExcel" name="excelform" id="" method="post">
+																  <input type="hidden" id="flagstat" name="flagstat" value="flagstat" />
+																  <input type="hidden" id="selectedDate" name="selectedDate" value="201410"/>
+																  <input type="hidden" id="startDate" name="startDate" value=""/>
+																  <input type="hidden" id="endDate" name="endDate" value=""/>
+																  <input type="hidden" id="seledType" name="seledType" value="2"/>
+																  <input type="hidden" id="selectType" name="selectType" value="1"/>
+																  <input type="hidden" id="callType" name="callType" value="3"/>
+																  <input type="hidden" id="pageSize" name="pageSize" value=""/>
+																  <input type="hidden" id="pageNo" name="pageNo" value=""/>
+																  <input type="hidden" id="detailType" name="detailType" value="2"/>
+																  <input type="hidden" id="accountNum" name="accountNum" value="18946031283:2000004"/>
+																  <input type="hidden" id="valueType" name="valueType" value="4"/>
+																</form>
+															<div align="right">
+															
+															</td>
+														</tr>
+														<tr>
+															<td height=15></td>
+														</tr>
+														<tr>
+
+
+														</tr>
+													</table>
+
+
+
+
+													<table width="100%" border="0" align="center"
+														cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+														<tr>
+															<td width="100%" bgcolor="#FFFFFF" height="20">
+																<div id="sending" align="center"
+																	style="position:absolute; top:46%; left:430px; z-index:0; visibility:hidden">
+																	<table width="300" cellpadding="0" cellspacing="0"
+																		bgcolor="#FFFFFF" style="border:1px solid #709DFC ;">
+																		<tr>
+																			<td>
+																				<table width="300" height="50" cellspacing="0"
+																					border="0" align="center">
+																					<tr height="50">
+																						<td align="center">
+																							<img src="images/shade3.gif" width="22">
+																						</td>
+																						<td style="font-size:12px; color: #0066CC"
+																							align="left">
+																							&nbsp;系统正在处理中，请耐心等待......
+																						</td>
+																					</tr>
+																				</table>
+																			</td>
+																		</tr>
+																	</table>
+																</div>
+															</td>
+														</tr>
+														<tr>
+														</tr>
+													</table>
+													<!--去掉注掉的html文本 -->
+
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+			<td width="1" bgcolor="e5e5e5"></td>
+		</tr>
+		<tr>
+			<td width="1" bgcolor="e5e5e5"></td>
+			<td height="1" bgcolor="e5e5e5"></td>
+			<td width="1" bgcolor="e5e5e5"></td>
+		</tr>
+	</table>
+
+</div>
+
+<!--登录页面_底部 begin -->
+<div class="step_pagewidth2 step_foot"><img src="/service/images/step/step_bottom.jpg" width="1000" height="6" /></div>
+<!--登录页面_底部 end -->   
+ 
+</body>
+</html>
+
