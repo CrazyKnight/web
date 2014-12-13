@@ -2,10 +2,9 @@ package com.jdbc;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.Statement;
 
 import com.bean.*;
-
-
 
 public class MyOperation {
     public void addgrade(gradeTbl L, String database, String user,
@@ -15,7 +14,19 @@ public class MyOperation {
         String sql = "insert into " + tblName + " values(?,?,?,?,?,?,?,?,?,?)";
         try {
             if (isFirst) {
-                conn.prepareStatement("delete from table1").executeUpdate();
+                Statement stmt = conn.createStatement();
+                stmt.execute("drop table if exists table1");
+                stmt.execute("create table table1("+
+                                "term varchar(50),"+
+                                "lessonNum varchar(50),"+
+                                "lessonName varchar(50),"+
+                                "techerName varchar(50),"+
+                                "kind varchar(50),"+
+                                "grade varchar(50),"+
+                                "time varchar(50),"+
+                                "myPoint varchar(50),"+
+                                "gradeKind varchar(50),"+
+                                "remark varchar(50));");
             }
             PreparedStatement pstmt = conn.prepareStatement(sql);
             pstmt.setString(1, L.getTerm());
@@ -36,57 +47,72 @@ public class MyOperation {
         }
 
     }
-	public void addbaobei(taobaoTbl T,String database,String user,String password,String tblName ){
-		MyConnection util = new MyConnection();
-		Connection conn = util.getConnection(database, user, password);
-		String sql = "insert into "+tblName+" values(?,?,?,?,?,?)";
-		try {
-			
-			PreparedStatement pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, T.getNumItem());
-			pstmt.setString(2, T.getShops());
-			pstmt.setString(3, T.getBaobeiNames());
-			pstmt.setString(4, T.getSpecs());
-			pstmt.setString(5, T.getPrices());
-			pstmt.setString(6, T.getQutys());
-			pstmt.executeUpdate();
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			util.close(conn);
-		}
-	}
-	
-	public void addzfb(zfbTbl T,String database,String user,String password,String tblName){
-		MyConnection util = new MyConnection();
-		Connection conn = util.getConnection(database, user, password);
-		String sql = "insert into "+tblName+" values(?,?,?,?,?,?,?)";
-		try {
-			PreparedStatement pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, T.getCsmBNos());
-			pstmt.setString(2, T.getTimes());
-			pstmt.setString(3, T.getInfos());
-			pstmt.setString(4, T.getIncomes());
-			pstmt.setString(5, T.getOutlays());
-			pstmt.setString(6, T.getBalances());
-			pstmt.setString(7, T.getFroms());
-			pstmt.executeUpdate();
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			util.close(conn);
-		}
-	}
-	
-	public void addphoneRecord(phoneRecordTbl T, String database, String user,
+
+    public void addbaobei(taobaoTbl T, String database, String user,
+            String password, String tblName) {
+        MyConnection util = new MyConnection();
+        //Connection conn = util.getConnection(database, user, password);
+        Connection conn = util.getConnection();
+        String sql = "insert into " + tblName + " values(?,?,?,?,?,?)";
+        try {
+
+            PreparedStatement pstmt = conn.prepareStatement(sql);
+            pstmt.setString(1, T.getNumItem());
+            pstmt.setString(2, T.getShops());
+            pstmt.setString(3, T.getBaobeiNames());
+            pstmt.setString(4, T.getSpecs());
+            pstmt.setString(5, T.getPrices());
+            pstmt.setString(6, T.getQutys());
+            pstmt.executeUpdate();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            util.close(conn);
+        }
+    }
+
+    public void addzfb(zfbTbl T, String database, String user, String password,
+            String tblName) {
+        MyConnection util = new MyConnection();
+      //Connection conn = util.getConnection(database, user, password);
+        Connection conn = util.getConnection();
+        String sql = "insert into " + tblName + " values(?,?,?,?,?,?,?)";
+        try {
+            PreparedStatement pstmt = conn.prepareStatement(sql);
+            pstmt.setString(1, T.getCsmBNos());
+            pstmt.setString(2, T.getTimes());
+            pstmt.setString(3, T.getInfos());
+            pstmt.setString(4, T.getIncomes());
+            pstmt.setString(5, T.getOutlays());
+            pstmt.setString(6, T.getBalances());
+            pstmt.setString(7, T.getFroms());
+            pstmt.executeUpdate();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            util.close(conn);
+        }
+    }
+
+    public void addphoneRecord(phoneRecordTbl T, String database, String user,
             String password, String tblName, boolean isFirst) {
         MyConnection util = new MyConnection();
-        Connection conn = util.getConnection(database, user, password);
+        //Connection conn = util.getConnection(database, user, password);
+        Connection conn = util.getConnection();
         String sql = "insert into " + tblName + " values(?,?,?,?,?,?,?,?)";
         try {
             if (isFirst) {
-                conn.prepareStatement("delete from table4").executeUpdate();
-                return;
+                Statement stmt = conn.createStatement();
+                stmt.execute("drop table if exists table4");
+                stmt.execute("create table table4("+
+                        "num varchar(20),"+
+                        "from_phone varchar(20),"+
+                        "city_code varchar(20),"+
+                        "to_phone varchar(20),"+
+                        "time_length varchar(20),"+
+                        "price varchar(20),"+
+                        "way varchar(20),"+
+                        "extend_price varchar(20));");
             }
             PreparedStatement pstmt = conn.prepareStatement(sql);
             pstmt.setString(1, T.getNum());
@@ -105,34 +131,41 @@ public class MyOperation {
             util.close(conn);
         }
     }
-	
-	
-	public void adddouban(doubanTbl T,String database,String user,String password,String tblName){
-		MyConnection util = new MyConnection();
-		Connection conn = util.getConnection(database, user, password);
-		String sql = "insert into "+tblName+" values(?,?,?,?)";
-		try {
-			PreparedStatement pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, T.getTopic());
-			pstmt.setString(2, T.getAuthor());
-			pstmt.setString(3, T.getResponse());
-			pstmt.setString(4, T.getLast_re());
-			pstmt.executeUpdate();
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			util.close(conn);
-		}
-	}
-	
-	public void addmetal(metalTbl T, String database, String user,
+
+    public void adddouban(doubanTbl T, String database, String user,
+            String password, String tblName) {
+        MyConnection util = new MyConnection();
+      //Connection conn = util.getConnection(database, user, password);
+        Connection conn = util.getConnection();
+        String sql = "insert into " + tblName + " values(?,?,?,?)";
+        try {
+            PreparedStatement pstmt = conn.prepareStatement(sql);
+            pstmt.setString(1, T.getTopic());
+            pstmt.setString(2, T.getAuthor());
+            pstmt.setString(3, T.getResponse());
+            pstmt.setString(4, T.getLast_re());
+            pstmt.executeUpdate();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            util.close(conn);
+        }
+    }
+
+    public void addmetal(metalTbl T, String database, String user,
             String password, String tblName, boolean isFirst) {
         MyConnection util = new MyConnection();
-        Connection conn = util.getConnection(database, user, password);
+        //Connection conn = util.getConnection(database, user, password);
+        Connection conn = util.getConnection();
         String sql = "insert into " + tblName + " values(?,?,?)";
         try {
             if (isFirst) {
-                conn.prepareStatement("delete from table6").executeUpdate();
+                Statement stmt = conn.createStatement();
+                stmt.execute("drop table if exists table6");
+                stmt.execute("create table table6("+
+                        "Metal varchar(20),"+
+                        "MelPoint_C varchar(20),"+
+                        "MelPoint_F varchar(20));");
             }
             PreparedStatement pstmt = conn.prepareStatement(sql);
             pstmt.setString(1, T.getMetal());
@@ -145,77 +178,94 @@ public class MyOperation {
             util.close(conn);
         }
     }
-	
-	
-	public void addsong(singTbl T,String database,String user,String password,String tblName){
-		MyConnection util = new MyConnection();
-		Connection conn = util.getConnection(database, user, password);
-		String sql = "insert into "+tblName+" values(?,?,?,?,?,?,?,?)";
-		try {
-			PreparedStatement pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, T.getCur_week());
-			pstmt.setString(2, T.getLast_week());
-			pstmt.setString(3, T.getNum_week());
-			pstmt.setString(4, T.getAlbum());
-			pstmt.setString(5, T.getSong());
-			pstmt.setString(6, T.getSinger());
-			pstmt.setString(7, T.getCompany());
-			pstmt.setString(8, T.getTop_his());
-			pstmt.executeUpdate();
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			util.close(conn);
-		}
-	}
-	
-	 public void addgaokao(gaokaoTbl T, String database, String user,
-	            String password, String tblName, boolean isFirst) {
-	        MyConnection util = new MyConnection();
-	        Connection conn = util.getConnection(database, user, password);
-	        String sql = "insert into " + tblName + " values(?,?)";
-	        try {
-	            if (isFirst) {
-	                conn.prepareStatement("delete from table8").executeUpdate();
-	            }
-	            PreparedStatement pstmt = conn.prepareStatement(sql);
-	            pstmt.setString(1, T.getGrade());
-	            pstmt.setString(2, T.getStuNum());
-	            pstmt.executeUpdate();
-	        } catch (Exception e) {
-	            e.printStackTrace();
-	        } finally {
-	            util.close(conn);
-	        }
-	    }
-	public void addmovie(movieTbl T,String database,String user,String password,String tblName){
-		MyConnection util = new MyConnection();
-		Connection conn = util.getConnection(database, user, password);
-		String sql = "insert into "+tblName+" values(?,?,?,?,?)";
-		try {
-			PreparedStatement pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, T.getName());
-			pstmt.setString(2, T.getActor());
-			pstmt.setString(3, T.getPlace());
-			pstmt.setString(4, T.getType());
-			pstmt.setString(5, T.getGrade());
-			
-			pstmt.executeUpdate();
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			util.close(conn);
-		}
-	}
-	
-	public void addBT(btTbl T, String database, String user, String password,
+
+    public void addsong(singTbl T, String database, String user,
+            String password, String tblName) {
+        MyConnection util = new MyConnection();
+      //Connection conn = util.getConnection(database, user, password);
+        Connection conn = util.getConnection();
+        String sql = "insert into " + tblName + " values(?,?,?,?,?,?,?,?)";
+        try {
+            PreparedStatement pstmt = conn.prepareStatement(sql);
+            pstmt.setString(1, T.getCur_week());
+            pstmt.setString(2, T.getLast_week());
+            pstmt.setString(3, T.getNum_week());
+            pstmt.setString(4, T.getAlbum());
+            pstmt.setString(5, T.getSong());
+            pstmt.setString(6, T.getSinger());
+            pstmt.setString(7, T.getCompany());
+            pstmt.setString(8, T.getTop_his());
+            pstmt.executeUpdate();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            util.close(conn);
+        }
+    }
+
+    public void addgaokao(gaokaoTbl T, String database, String user,
+            String password, String tblName, boolean isFirst) {
+        MyConnection util = new MyConnection();
+        //Connection conn = util.getConnection(database, user, password);
+        Connection conn = util.getConnection();
+        String sql = "insert into " + tblName + " values(?,?)";
+        try {
+            if (isFirst) {
+                Statement stmt = conn.createStatement();
+                stmt.execute("drop table if exists table8");
+                stmt.execute("create table table8("+
+                        "grade varchar(20),"+
+                        "stuNum varchar(20));");
+            }
+            PreparedStatement pstmt = conn.prepareStatement(sql);
+            pstmt.setString(1, T.getGrade());
+            pstmt.setString(2, T.getStuNum());
+            pstmt.executeUpdate();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            util.close(conn);
+        }
+    }
+
+    public void addmovie(movieTbl T, String database, String user,
+            String password, String tblName) {
+        MyConnection util = new MyConnection();
+      //Connection conn = util.getConnection(database, user, password);
+        Connection conn = util.getConnection();
+        String sql = "insert into " + tblName + " values(?,?,?,?,?)";
+        try {
+            PreparedStatement pstmt = conn.prepareStatement(sql);
+            pstmt.setString(1, T.getName());
+            pstmt.setString(2, T.getActor());
+            pstmt.setString(3, T.getPlace());
+            pstmt.setString(4, T.getType());
+            pstmt.setString(5, T.getGrade());
+
+            pstmt.executeUpdate();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            util.close(conn);
+        }
+    }
+
+    public void addBT(btTbl T, String database, String user, String password,
             String tblName, boolean isFirst) {
         MyConnection util = new MyConnection();
-        Connection conn = util.getConnection(database, user, password);
+        //Connection conn = util.getConnection(database, user, password);
+        Connection conn = util.getConnection();
         String sql = "insert into " + tblName + " values(?,?,?,?,?)";
         try {
             if (isFirst) {
-                conn.prepareStatement("delete from table8").executeUpdate();
+                Statement stmt = conn.createStatement();
+                stmt.execute("drop table if exists table10");
+                stmt.execute("create table table10("+
+                        "title varchar(100),"+
+                        "day varchar(20),"+
+                        "actor varchar(50),"+
+                        "type varchar(50),"+
+                        "scan_num varchar(20));");
             }
             PreparedStatement pstmt = conn.prepareStatement(sql);
             pstmt.setString(1, T.getTitle());

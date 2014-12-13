@@ -31,4 +31,16 @@ public class doubanTbl {
 		this.last_re = last_re;
 	}
 	
+	public void set(String s,String v) {
+        if (s.equals("topic")) {
+            this.setTopic(v);
+        } else if (s.equals("author")) {
+            this.setAuthor(v);
+        } else if (s.equals("response")) {
+            this.setResponse(v);
+        } else if (s.equals("last_re")) {
+            this.setLast_re(v);
+        }
+        return;
+    }
 }

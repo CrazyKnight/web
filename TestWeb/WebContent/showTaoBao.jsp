@@ -9,25 +9,45 @@
 <title>淘宝购物单</title>
 </head>
 <body >
-<table width="80%" border="2" cellpadding="2" cellspacing="0">
+
+    <table border="1" cellpadding="2" cellspacing="0">
+        <a href="welcome.jsp">返回主菜单&nbsp</a>
+        <a href="download2?tindex=2">下载&nbsp</a>
+        <a href="FileInput.jsp?index=2">上传文件&nbsp</a>
+        <p> <span style="color:Red">${download }</span></p>
+        <tr>
+            <s:iterator value="#request._list2" id="field" status="st">
+            <s:if test="#field=='baobeiNames'"> <td><center><s:property /></center></td></s:if>
+            <s:else> <td><center>
+                        <a href="_delete2?_index2=${st.index }"><s:property /></a>
+                    </center></td>
+            </s:else>
+            </s:iterator>
+            <td width="100px"><center>操作</center></td>
+        </tr>
+				<c:iterator value="#request.list2" id="taobaoTbl" status="st">
 		<tr>
-		<td width="400px"><center><span style="color:Green"><font size=4 >宝贝名</font></span></center></td>
-		<td width="120px"><center><span style="color:Green"><font size=4 >订单号</font></span></center></td>
-		<td width="120px"><center><span style="color:Green"><font size=4 >店铺名</font></span></center></td>
-		<td width="120px"><center><span style="color:Green"><font size=4 >货物信息</font></span></center></td>
-		<td width="20px"><center><span style="color:Green"><font size=4 >数量</font></span></center></td>
-		<td width="20px"><center><span style="color:Green"><font size=4 >价格</font></span></center></td>
-		<td width="20px"><center><span style="color:Green"><font size=4>Delete</font></span></center></td>
-		</tr>
-				<c:iterator value="#request.taobao_list" id="taobaoTbl" status="st">
-		<tr>
+		      <s:if test="#taobaoTbl.baobeiNames!=null">
 			<td width="400px"><center><c:property value="#taobaoTbl.baobeiNames"/></center></td>
+			</s:if>
+			<s:if test="#taobaoTbl.numItem!=null">
 			<td width="120px"><center><c:property value="#taobaoTbl.numItem"/></center></td>
+			</s:if>
+			<s:if test="#taobaoTbl.shops!=null">
 			<td width="120px"><center><c:property value="#taobaoTbl.shops"/></center></td>
+			</s:if>
+			<s:if test="#taobaoTbl.Specs!=null">
 			<td width="120px"><center><c:property value="#taobaoTbl.Specs"/></center></td>
+			</s:if>
+			<s:if test="#taobaoTbl.qutys!=null">
 			<td width="20px"><center><c:property value="#taobaoTbl.qutys"/></center></td>
+			</s:if>
+			<s:if test="#taobaoTbl.prices!=null">
 			<td width="20px"><center><c:property value="#taobaoTbl.prices"/></center></td>
-			<td width="20px"><center><a href="DeleteTB?taobao_index=${st.index }">删除</a></center></td>
+			</s:if>
+			<s:if test="#taobaoTbl.baobeiNames!=null">
+			<td width="20px"><center><a href="delete2?index2=${st.index }">删除</a></center></td>
+			</s:if>
 			
 			</tr>
 		</c:iterator>		

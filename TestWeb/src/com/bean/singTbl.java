@@ -58,4 +58,25 @@ public class singTbl {
 	public void setTop_his(String top_his) {
 		this.top_his = top_his;
 	}
+	
+	public void set(String s,String v) {
+        if (s.equals("cur_week")) {
+            this.setCur_week(v);
+        } else if (s.equals("last_week")) {
+            this.setLast_week(v);
+        } else if (s.equals("num_week")) {
+            this.setNum_week(v);
+        } else if (s.equals("album")) {
+            this.setAlbum(v);
+        } else if (s.equals("song")) {
+            this.setSong(v);
+        } else if (s.equals("singer")) {
+            this.setSinger(v);
+        } else if (s.equals("company")) {
+            this.setCompany(v);
+        } else if (s.equals("top_his")) {
+            this.setTop_his(v);
+        }
+        return;
+    }
 }

@@ -9,28 +9,45 @@
 <title>支付宝支付记录</title>
 </head>
 <body >
-<table width="80%" border="2" cellpadding="2" cellspacing="0">
+ <table border="1" cellpadding="2" cellspacing="0">
+        <a href="welcome.jsp">返回主菜单&nbsp</a>
+        <a href="download3?tindex=3">下载&nbsp</a>
+        <a href="FileInput.jsp?index=3">上传文件&nbsp</a>
+        <p> <span style="color:Red">${download }</span></p>
+        <tr>
+            <s:iterator value="#request._list3" id="field" status="st">
+            <s:if test="#field=='csmBNos'"> <td><center><s:property /></center></td></s:if>
+            <s:else> <td><center>
+                        <a href="_delete3?_index3=${st.index }"><s:property /></a>
+                    </center></td>
+            </s:else>
+            </s:iterator>
+            <td width="100px"><center>操作</center></td>
+        </tr>
+				<c:iterator value="#request.list3" id="zfbTbl" status="st">
 		<tr>
-		<td width="200px"><center><span style="color:Green"><font size=4 >流水号</font></span></center></td>
-		<td width="120px"><center><span style="color:Green"><font size=4 >日期</font></span></center></td>
-		<td width="300px"><center><span style="color:Green"><font size=4 >名称</font></span></center></td>
-		<td width="20px"><center><span style="color:Green"><font size=4 >收入</font></span></center></td>
-		<td width="20px"><center><span style="color:Green"><font size=4 >支出</font></span></center></td>
-		<td width="20px"><center><span style="color:Green"><font size=4 >账户余额</font></span></center></td>
-		<td width="20px"><center><span style="color:Green"><font size=4 >详情</font></span></center></td>
-		<td width="20px"><center><span style="color:Green"><font size=4>Delete</font></span></center></td>
-		</tr>
-				<c:iterator value="#request.zfb_list" id="zfbTbl" status="st">
-		<tr>
+		<s:if test="#zfbTbl.csmBNos!=null">
 			<td width="200px"><center><c:property value="#zfbTbl.csmBNos"/></center></td>
+			</s:if>
+			<s:if test="#zfbTbl.times!=null">
 			<td width="120px"><center><c:property value="#zfbTbl.times"/></center></td>
+			</s:if>
+			<s:if test="#zfbTbl.infos!=null">
 			<td width="300px"><center><c:property value="#zfbTbl.infos"/></center></td>
+			</s:if>
+			<s:if test="#zfbTbl.incomes!=null">
 			<td width="20px"><center><c:property value="#zfbTbl.incomes"/></center></td>
+			</s:if>
+			<s:if test="#zfbTbl.outlays!=null">
 			<td width="20px"><center><c:property value="#zfbTbl.outlays"/></center></td>
+			</s:if>
+			<s:if test="#zfbTbl.balances!=null">
 			<td width="20px"><center><c:property value="#zfbTbl.balances"/></center></td>
+			</s:if>
+			<s:if test="#zfbTbl.froms!=null">
 			<td width="20px"><center><c:property value="#zfbTbl.froms"/></center></td>
-			<td width="20px"><center><a href="DeleteZfb?zfb_index=${st.index }">删除</a></center></td>
-			
+			</s:if>
+			<td width="20px"><center><a href="delete3?index3=${st.index }">删除</a></center></td>
 			</tr>
 		</c:iterator>		
 </table>

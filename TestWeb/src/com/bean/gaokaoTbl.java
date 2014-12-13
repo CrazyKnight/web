@@ -19,4 +19,13 @@ public class gaokaoTbl {
 	public void setStuNum(String stuNum) {
 		this.stuNum = stuNum;
 	}
+	
+	public void set(String s,String v) {
+        if (s.equals("grade")) {
+            this.setGrade(v);
+        } else if (s.equals("stuNum")) {
+            this.setStuNum(v);
+        }
+        return;
+    }
 }

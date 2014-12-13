@@ -4,12 +4,14 @@ import java.io.File;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 
-import com.TaoBaoOpera.ShowTaoBao;
+import com.table.action.*;
 import com.bean.taobaoTbl;
 import com.jdbc.MyConnection;
 import com.jdbc.MyOperation;
@@ -35,11 +37,20 @@ public class taobaoGet {
 	        String tblName = "table2";
 	        
 	        MyConnection util1 = new MyConnection();
-			Connection conn = util1.getConnection(database, user, password);
-			String clean_sql = "delete from table2";
-			PreparedStatement pstmt1 = conn.prepareStatement(clean_sql);
-			pstmt1.executeUpdate();
-			for(int i=0;i<numItem.size();i++){
+			//Connection conn = util1.getConnection(database, user, password);
+	        Connection conn = util1.getConnection();
+			String clean_sql = "drop table if exists table2";
+	            Statement stmt = conn.createStatement();
+	            stmt.execute(clean_sql);
+	            stmt.execute("create table table2("+ 
+	                    "numItem varchar(50),"+
+	                    "shops varchar(100),"+
+	                    "baobeiNames varchar(100),"+
+	                    "Specs varchar(100),"+
+	                    "prices varchar(10),"+
+	                    "qutys varchar(10));");
+
+	         for(int i=0;i<numItem.size();i++){
 				T.setNumItem(numItem.get(i).text());
 				T.setShops(shops.get(i).text());
 				T.setBaobeiNames(baobeiNames.get(i).text());
@@ -49,7 +60,7 @@ public class taobaoGet {
 				util.addbaobei(T, database, user, password, tblName);
 				
 			}
-			new ShowTaoBao().execute();
+			new ActionTable2().show();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

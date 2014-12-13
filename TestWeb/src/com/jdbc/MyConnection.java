@@ -9,8 +9,8 @@ public class MyConnection {
 	public Connection getConnection(String database,String user,String password){
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			database = "jdbc:mysql://w.rdc.sae.sina.com.cn:3307/"+database;
-			//database = "jdbc:mysql://localhost:3306/"+database;
+			//database = "jdbc:mysql://w.rdc.sae.sina.com.cn:3307/"+database;
+			database = "jdbc:mysql://localhost:3306/"+database;
 			Connection conn = DriverManager.getConnection(database,user,password);
 			return conn;
 			
@@ -20,6 +20,18 @@ public class MyConnection {
 		return null;
 		
 	}
+	
+	public Connection getConnection() {
+	    try {
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/webtblget","root","123456");
+            return conn;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+	}
+	
 	public void close(Connection conn){
 		try {
 			conn.close();

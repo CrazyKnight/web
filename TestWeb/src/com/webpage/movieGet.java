@@ -5,13 +5,14 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import com.MovieOpera.ShowMovie;
+import com.table.action.*;
 import com.bean.movieTbl;
 import com.jdbc.MyConnection;
 import com.jdbc.MyOperation;
@@ -27,16 +28,22 @@ public class movieGet {
         String password = "133lxi3wk414hy32k05y4h0ixihzl4l5xy5yxml2";
         
         MyConnection util1 = new MyConnection();
-		Connection conn = util1.getConnection(database, user, password);
-		String clean_sql = "delete from table9";
-		PreparedStatement pstmt1;
-		try {
-			pstmt1 = conn.prepareStatement(clean_sql);
-			pstmt1.executeUpdate();
-		} catch (SQLException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
+      //Connection conn = util1.getConnection(database, user, password);
+        Connection conn = util1.getConnection();
+		String clean_sql = "drop table if exists table9";
+        try {
+            Statement stmt = conn.createStatement();
+            stmt.execute(clean_sql);
+            stmt.execute("create table table9("+ 
+                    "name varchar(30),"+
+                    "actor varchar(100),"+
+                    "place varchar(20),"+
+                    "type varchar(100),"+
+                    "grade varchar(20));");
+        } catch (SQLException e1) {
+            // TODO Auto-generated catch block
+            e1.printStackTrace();
+        }
         String str[] = new String[5];
         movieTbl T = new movieTbl();
         Document doc;
@@ -58,7 +65,7 @@ public class movieGet {
 				T.setGrade(str[4]);
 				util.addmovie(T, database, user, password, tblName);
 			}
-			new ShowMovie().execute();
+			new ActionTable9().show();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

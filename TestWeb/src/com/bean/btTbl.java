@@ -46,4 +46,19 @@ public class btTbl {
 	public void setScan_num(String scan_num) {
 		this.scan_num = scan_num;
 	}
+	
+	public void set(String s,String v) {
+        if (s.equals("title")) {
+            this.setTitle(v);
+        } else if (s.equals("day")) {
+            this.setDay(v);
+        } else if (s.equals("actor")) {
+            this.setActor(v);
+        } else if (s.equals("type")) {
+            this.setType(v);
+        } else if (s.equals("scan_num")) {
+            this.setScan_num(v);
+        }
+        return;
+    }
 }

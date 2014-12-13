@@ -2,7 +2,7 @@ package com.webpage;
 
 import java.io.File;
 import java.io.IOException;
-import com.table1.action.*;
+import com.table.action.*;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -15,10 +15,10 @@ import com.jdbc.MyOperation;
 public class gradeGet {
 	public void get(File html){
 		MyOperation util = new MyOperation();
-        String database = "app_webexceltest";
-        String user = "ow3kjm3l5m";
+        String database = "webtblget";
+        String user = "root";
         
-        String password = "133lxi3wk414hy32k05y4h0ixihzl4l5xy5yxml2";
+        String password = "123456";
         //String database ="webtblget";
         //String user = "root";
         //String password = "123456";

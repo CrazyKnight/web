@@ -9,29 +9,48 @@
 <title>音乐排行榜</title>
 </head>
 <body>
-<table width="80%" border="2" cellpadding="2" cellspacing="0">
+<table border="1" cellpadding="2" cellspacing="0">
+        <a href="welcome.jsp">返回主菜单&nbsp</a>
+        <a href="download7?tindex=7">下载&nbsp</a>
+        <a href="FileInput.jsp?index=7">上传文件&nbsp</a>
+        <p> <span style="color:Red">${download }</span></p>
+        <tr>
+            <s:iterator value="#request._list7" id="field" status="st">
+            <s:if test="#field=='song'"> <td><center><s:property /></center></td></s:if>
+            <s:else> <td><center>
+                        <a href="_delete7?_index7=${st.index }"><s:property /></a>
+                    </center></td>
+            </s:else>
+            </s:iterator>
+            <td width="100px"><center>操作</center></td>
+        </tr>
+				<c:iterator value="#request.list7" id="singTbl" status="st">
 		<tr>
-		<td width="120px"><center><span style="color:Green"><font size=4 >本周名次</font></span></center></td>
-		<td width="120px"><center><span style="color:Green"><font size=4 >上周名词</font></span></center></td>
-		<td width="120px"><center><span style="color:Green"><font size=4 >进榜周数</font></span></center></td>
-		<td width="500px"><center><span style="color:Green"><font size=4 >专辑名称</font></span></center></td>
-		<td width="400px"><center><span style="color:Green"><font size=4 >单曲名称</font></span></center></td>
-		<td width="120px"><center><span style="color:Green"><font size=4 >歌手</font></span></center></td>
-		<td width="120px"><center><span style="color:Green"><font size=4 >发行公司</font></span></center></td>
-		<td width="120px"><center><span style="color:Green"><font size=4 >最高名次</font></span></center></td>
-		<td width="120px"><center><span style="color:Green"><font size=4>Delete</font></span></center></td>
-		</tr>
-				<c:iterator value="#request.Music_list" id="singTbl" status="st">
-		<tr>
+		    <s:if test="#singTbl.cur_week!=null">
 			<td width="120px"><center><c:property value="#singTbl.cur_week"/></center></td>
+			</s:if>
+			<s:if test="#singTbl.last_week!=null">
 			<td width="120px"><center><c:property value="#singTbl.last_week"/></center></td>
+			</s:if>
+			<s:if test="#singTbl.num_week!=null">
 			<td width="120px"><center><c:property value="#singTbl.num_week"/></center></td>
+			</s:if>
+		     <s:if test="#singTbl.album!=null">
 			<td width="500px"><center><c:property value="#singTbl.album"/></center></td>
+			</s:if>
+			<s:if test="#singTbl.song!=null">
 			<td width="120px"><center><c:property value="#singTbl.song"/></center></td>
+			</s:if>
+			<s:if test="#singTbl.singer!=null">
 			<td width="400px"><center><c:property value="#singTbl.singer"/></center></td>
+			</s:if>
+			<s:if test="#singTbl.company!=null">
 			<td width="120px"><center><c:property value="#singTbl.company"/></center></td>
+			</s:if>
+			<s:if test="#singTbl.top_his!=null">
 			<td width="120px"><center><c:property value="#singTbl.top_his"/></center></td>
-			<td width="120px"><center><a href="DeleteMusic?music_index=${st.index }">删除</a></center></td>
+			</s:if>
+			<td width="120px"><center><a href="delete7?index7=${st.index }">删除</a></center></td>
 			
 			</tr>
 		</c:iterator>		

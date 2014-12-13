@@ -22,98 +22,169 @@
 			<result name="8">/showTable8.jsp</result>
 			<result name="9">/showMovie.jsp</result>
 			<result name="10">/showTable10.jsp</result>
-		</action>
-		<action name="DeleteTB" class="com.TaoBaoOpera.DeleteTB" method="execute">
+		</action>	
+		<action name="show2" class="com.table.action.ActionTable2" method="show">
+		 <result name="failure">showTaoBao.jsp</result>
+            <result>showTaoBao.jsp</result>
+        </action>	
+		<action name="delete2" class="com.table.action.ActionTable2" method="delete">
 		<result name="success">/showTaoBao.jsp</result>
 		</action>
-		<action name="DeleteZfb" class="com.zfbOpera.DeleteZfb" method="execute">
+		<action name="_delete2" class="com.table.action.ActionTable2" method="delete0">
+        <result name="success">/showTaoBao.jsp</result>
+        </action>
+        <action name="show3" class="com.table.action.ActionTable3" method="show">
+            <result name="failure">/showZfb.jsp</result>
+            <result>showZfb.jsp</result>
+        </action>
+		<action name="delete3" class="com.table.action.ActionTable3" method="delete">
 		<result name="success">/showZfb.jsp</result>
 		</action>
-		<action name="DeleteDB" class="com.dbOpera.DeleteDB" method="execute">
+		<action name="_delete3" class="com.table.action.ActionTable3" method="delete0">
+        <result name="success">/showZfb.jsp</result>
+        </action>
+        <action name="show5" class="com.table.action.ActionTable5"
+            method="show">
+             <result name="failure">showDB.jsp</result>
+            <result>showDB.jsp</result>
+        </action>
+		<action name="delete5" class="com.table.action.ActionTable5" method="delete">
 		<result name="success">/showDB.jsp</result>
 		</action>
-		<action name="DeleteMusic" class="com.MusicOpera.DeleteMusic" method="execute">
+		<action name="_delete5" class="com.table.action.ActionTable5" method="delete0">
+        <result name="success">/showDB.jsp</result>
+        </action>
+        <action name="show7" class="com.table.action.ActionTable7"
+            method="show">
+             <result name="failure">showMusic.jsp</result>
+            <result>showMusic.jsp</result>
+        </action>
+		<action name="delete7" class="com.table.action.ActionTable7" method="delete">
 		<result name="success">/showMusic.jsp</result>
 		</action>
-		<action name="DeleteMovie" class="com.MovieOpera.DeleteMovie" method="execute">
+		<action name="_delete7" class="com.table.action.ActionTable7" method="delete0">
+        <result name="success">/showMusic.jsp</result>
+        </action>
+        <action name="show9" class="com.table.action.ActionTable9"
+            method="show">
+             <result name="failure">showMovie.jsp</result>
+            <result>showMovie.jsp</result>
+        </action>
+		<action name="delete9" class="com.table.action.ActionTable9" method="delete">
 		<result name="success">/showMovie.jsp</result>
 		</action>
+		<action name="_delete9" class="com.table.action.ActionTable9" method="delete0">
+        <result name="success">/showMovie.jsp</result>
+        </action>
 		
-		<action name="delete1" class="com.table1.action.ActionTable1"
-            method="delete">
+		<action name="show1" class="com.table.action.ActionTable1" method="show">
+		 <result name="failure">showTable1.jsp</result>
             <result>showTable1.jsp</result>
         </action>
-        <action name="add1" class="com.table1.action.ActionTable1"
-            method="add">
-            <result>addTable1.jsp</result>
-            <result name="failure">addTable1.jsp</result>
-        </action>
-        <action name="show1" class="com.table1.action.ActionTable1"
-            method="show">
+		<action name="delete1" class="com.table.action.ActionTable1" method="delete">
             <result>showTable1.jsp</result>
         </action>
-        <action name="update1" class="com.table1.action.ActionTable1"
-            method="update">
-            <result>updateTable1.jsp</result>
-            <result name="failure">updateTable1.jsp</result>
+        <action name="_delete1" class="com.table.action.ActionTable1" method="delete0">
+            <result>showTable1.jsp</result>
         </action>
-
-        <action name="show4" class="com.table4.action.ActionTable4"
+        
+        <action name="show4" class="com.table.action.ActionTable4"
             method="show">
+             <result name="failure">showTable4.jsp</result>
             <result>showTable4.jsp</result>
         </action>
-        <action name="add4" class="com.table4.action.ActionTable4"
-            method="add">
-            <result>addTable4.jsp</result>
-            <result name="failure">addTable4.jsp</result>
-        </action>
-        <action name="delete4" class="com.table4.action.ActionTable4"
+        <action name="delete4" class="com.table.action.ActionTable4"
             method="delete">
             <result>showTable4.jsp</result>
         </action>
+        <action name="_delete4" class="com.table.action.ActionTable4"
+            method="delete0">
+            <result>showTable4.jsp</result>
+        </action>
         
-        <action name="show6" class="com.table6.action.ActionTable6"
+        
+        <action name="show6" class="com.table.action.ActionTable6"
             method="show">
+             <result name="failure">showTable6.jsp</result>
             <result>showTable6.jsp</result>
         </action>
-        <action name="add6" class="com.table6.action.ActionTable6"
-            method="add">
-            <result>addTable6.jsp</result>
-            <result name="failure">addTable6.jsp</result>
-        </action>
-        <action name="delete6" class="com.table6.action.ActionTable6"
+        <action name="delete6" class="com.table.action.ActionTable6"
             method="delete">
             <result>showTable6.jsp</result>
         </action>
+        <action name="_delete6" class="com.table.action.ActionTable6"
+            method="delete0">
+            <result>showTable6.jsp</result>
+        </action>
         
-        <action name="show8" class="com.table8.action.ActionTable8"
+        <action name="show8" class="com.table.action.ActionTable8"
             method="show">
+             <result name="failure">showTable8.jsp</result>
             <result>showTable8.jsp</result>
         </action>
-        <action name="add8" class="com.table8.action.ActionTable8"
-            method="add">
-            <result>addTable8.jsp</result>
-            <result name="failure">addTable8.jsp</result>
-        </action>
-        <action name="delete8" class="com.table8.action.ActionTable8"
+        <action name="delete8" class="com.table.action.ActionTable8"
             method="delete">
             <result>showTable8.jsp</result>
         </action>
+          <action name="_delete8" class="com.table.action.ActionTable8"
+            method="delete0">
+            <result>showTable8.jsp</result>
+        </action>
         
-        <action name="show10" class="com.table10.action.ActionTable10"
+        <action name="show10" class="com.table.action.ActionTable10"
             method="show">
+             <result name="failure">showTable10.jsp</result>
             <result>showTable10.jsp</result>
         </action>
-        <action name="add10" class="com.table10.action.ActionTable10"
-            method="add">
-            <result>addTable10.jsp</result>
-            <result name="failure">addTable10.jsp</result>
-        </action>
-        <action name="delete10" class="com.table10.action.ActionTable10"
+        <action name="delete10" class="com.table.action.ActionTable10"
             method="delete">
             <result>showTable10.jsp</result>
         </action>
-	
+        <action name="_delete10" class="com.table.action.ActionTable10"
+            method="delete0">
+            <result>showTable10.jsp</result>
+        </action>
+        
+	   <action name="download1" class="com.table.action.OutToExcel" method="execute">
+	       <result name="failure">showTable1.jsp</result>
+            <result>showTable1.jsp</result>
+        </action>
+        <action name="download2" class="com.table.action.OutToExcel" method="execute">
+            <result name="failure">showTaoBao.jsp</result>
+            <result>showTaoBao.jsp</result>
+        </action>
+        <action name="download3" class="com.table.action.OutToExcel" method="execute">
+            <result name="failure">showZfb.jsp</result>
+            <result>showZfb.jsp</result>
+        </action>
+        <action name="download4" class="com.table.action.OutToExcel" method="execute">
+            <result name="failure">showTable4.jsp</result>
+            <result>showTable4.jsp</result>
+        </action>
+        <action name="download5" class="com.table.action.OutToExcel" method="execute">
+            <result name="failure">showDB.jsp</result>
+            <result>showDB.jsp</result>
+        </action>
+        <action name="download6" class="com.table.action.OutToExcel" method="execute">
+            <result name="failure">showTable6.jsp</result>
+            <result>showTable6.jsp</result>
+        </action>
+        <action name="download7" class="com.table.action.OutToExcel" method="execute">
+            <result name="failure">showMusic.jsp</result>
+            <result>showMusic.jsp</result>
+        </action>
+        <action name="download8" class="com.table.action.OutToExcel" method="execute">
+         <result name="failure">showTable8.jsp</result>
+            <result>showTable8.jsp</result>
+        </action>
+        <action name="download9" class="com.table.action.OutToExcel" method="execute">
+            <result name="failure">showMovie.jsp</result>
+            <result>showMovie.jsp</result>
+        </action>
+        <action name="download10" class="com.table.action.OutToExcel" method="execute">
+         <result name="failure">showTable10.jsp</result>
+            <result>showTable10.jsp</result>
+        </action>
 		
 	</package>
 </struts>

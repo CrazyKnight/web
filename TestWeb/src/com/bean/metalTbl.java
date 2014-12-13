@@ -29,4 +29,14 @@ public class metalTbl {
 		MelPoint_F = melPoint_F;
 	}
 
+	public void set(String s,String v) {
+        if (s.equals("Metal")) {
+            this.setMetal(v);
+        } else if (s.equals("MelPoint_C")) {
+            this.setMelPoint_C(v);
+        } else if (s.equals("MelPoint_F")) {
+            this.setMelPoint_F(v);
+        }
+        return;
+    }
 }

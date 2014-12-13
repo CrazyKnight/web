@@ -4,6 +4,7 @@ import java.io.File;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -11,7 +12,7 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import com.bean.doubanTbl;
-import com.dbOpera.ShowDB;
+import com.table.action.*;
 import com.jdbc.MyConnection;
 import com.jdbc.MyOperation;
 
@@ -24,22 +25,28 @@ public class doubanGet {
         String user = "ow3kjm3l5m"; 
         String password = "133lxi3wk414hy32k05y4h0ixihzl4l5xy5yxml2";
        MyConnection util1 = new MyConnection();
-		Connection conn = util1.getConnection("webtblget",  "root", "");
-		String clean_sql = "delete from table5";
-		PreparedStatement pstmt1;
-		try {
-			pstmt1 = conn.prepareStatement(clean_sql);
-			pstmt1.executeUpdate();
-		} catch (SQLException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
+     //Connection conn = util1.getConnection(database, user, password);
+       Connection conn = util1.getConnection();
+		String clean_sql = "drop table if exists table5";
+        try {
+            Statement stmt = conn.createStatement();
+            stmt.execute(clean_sql);
+            stmt.execute("create table table5("+ 
+                    "topic varchar(100),"+
+                    "author varchar(20),"+
+                    "response varchar(20),"+
+                    "last_re varchar(20));");
+        } catch (SQLException e1) {
+            // TODO Auto-generated catch block
+            e1.printStackTrace();
+        }
 		
         doubanTbl T = new doubanTbl();
         Document doc;
         String str[] = new String[4];
 		try {
-			doc = Jsoup.parse(html,"GBK");
+			doc = Jsoup.parse(html,"utf-8");
+			System.out.println(doc);
 			Element tbl = doc.select("table").get(2);
 			Elements trs = tbl.select("tr");
 			for(int i=0;i<trs.size();i++){
@@ -55,7 +62,7 @@ public class doubanGet {
 				T.setLast_re(str[3]);
 				util.adddouban(T, database, user, password, tblName);
 			}
-		new ShowDB().execute();
+		new ActionTable5().show();
 		
 		} catch (Exception e) {
 			e.printStackTrace();

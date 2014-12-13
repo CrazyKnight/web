@@ -21,31 +21,48 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
 <body>
-        <h4 width="200px"><a href="addTable4.jsp">添加通话信息</a></h4>
-    <table width="100%" border="1" cellpadding="2" cellspacing="0">
-        
-        <tr>
-            
-            <td width="100px"><center>序号</center></td>
-            <td width="150px"><center>主叫号码</center></td>
-            <td width="200px"><center>对端位置计费区号</center></td>
-            <td width="100px"><center>被叫号码</center></td>
-            <td width="100px"><center>时长</center></td>
-            <td width="100px"><center>费用（分）</center></td>
-            <td width="100px"><center>呼叫方式</center></td>
-            <td width="100px"><center>附加费（分）</center></td>
+   <a href="welcome.jsp">返回主菜单&nbsp </a>
+   <a href="download4?tindex=4">下载&nbsp</a>
+   <a href="FileInput.jsp?index=4">上传文件&nbsp</a>
+   <p> <span style="color:Red">${download }</span></p>
+    <table border="1" cellpadding="2" cellspacing="0">
+       <tr>
+           <s:iterator value="#request._list4" id="field" status="st">
+            <s:if test="#field=='num'"> <td><center><s:property /></center></td></s:if>
+            <s:else> <td><center>
+                        <a href="_delete4?_index4=${st.index }"><s:property /></a>
+                    </center></td>
+            </s:else>
+            </s:iterator>
             <td width="100px"><center>操作</center></td>
-        </tr> 
+        </tr>
+        
         <s:iterator value="#request.list4" id="phoneRecordTbl" status="st4">
         <tr>
+            <s:if test="#phoneRecordTbl.num!=null">
             <td width="100px"><center><s:property value="#phoneRecordTbl.num"/></center></td>
+            </s:if>
+            <s:if test="#phoneRecordTbl.from_phone!=null">
             <td width="150px"><center><s:property value="#phoneRecordTbl.from_phone"/></center></td>
+            </s:if>
+            <s:if test="#phoneRecordTbl.city_code!=null">
             <td width="200px"><center><s:property value="#phoneRecordTbl.city_code"/></center></td>
+            </s:if>
+            <s:if test="#phoneRecordTbl.to_phone!=null">
             <td width="100px"><center><s:property value="#phoneRecordTbl.to_phone"/></center></td>
+            </s:if>
+            <s:if test="#phoneRecordTbl.time_length!=null">
             <td width="100px"><center><s:property value="#phoneRecordTbl.time_length"/></center></td>
+            </s:if>
+            <s:if test="#phoneRecordTbl.price!=null">
             <td width="100px"><center><s:property value="#phoneRecordTbl.price"/></center></td>
+            </s:if>
+            <s:if test="#phoneRecordTbl.way!=null">
             <td width="100px"><center><s:property value="#phoneRecordTbl.way"/></center></td>
+            </s:if>
+            <s:if test="#phoneRecordTbl.extend_price!=null">
             <td width="100px"><center><s:property value="#phoneRecordTbl.extend_price"/></center></td>
+            </s:if>
             
             <td width="100px"><center><a href="delete4?index4=${st4.index }">删除</a></center></td>
             </tr>

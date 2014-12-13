@@ -87,4 +87,24 @@ public class phoneRecordTbl {
         this.extend_price = extend_price;
     }
 
+    public void set(String s,String v) {
+        if (s.equals("num")) {
+            this.setNum(v);
+        } else if (s.equals("from_phone")) {
+            this.setFrom_phone(v);
+        } else if (s.equals("city_code")) {
+            this.setCity_code(v);
+        } else if (s.equals("to_phone")) {
+            this.setTo_phone(v);
+        } else if (s.equals("time_length")) {
+            this.setTime_length(v);
+        } else if (s.equals("price")) {
+            this.setPrice(v);
+        } else if (s.equals("way")) {
+            this.setWay(v);
+        } else if(s.equals("extend_price")) {
+            this.setExtend_price(v);
+        }
+        return;
+    }
 }

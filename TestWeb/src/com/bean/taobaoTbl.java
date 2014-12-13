@@ -55,4 +55,21 @@ public class taobaoTbl {
 	public void setQutys(String qutys) {
 		this.qutys = qutys;
 	}
+	public void set(String s,String v) {
+        if (s.equals("numItem")) {
+            this.setNumItem(v);
+        } else if (s.equals("shops")) {
+            this.setShops(v);
+        } else if (s.equals("baobeiNames")) {
+            this.setBaobeiNames(v);
+        } else if (s.equals("Specs")) {
+            this.setSpecs(v);
+        } else if (s.equals("prices")) {
+            this.setPrices(v);
+        } else if (s.equals("qutys")) {
+            this.setQutys(v);
+        }
+        return;
+    }
+	
 }

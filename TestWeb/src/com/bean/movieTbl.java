@@ -46,4 +46,19 @@ public class movieTbl {
 	public void setGrade(String grade) {
 		this.grade = grade;
 	}
+	
+	public void set(String s,String v) {
+        if (s.equals("name")) {
+            this.setName(v);
+        } else if (s.equals("actor")) {
+            this.setActor(v);
+        } else if (s.equals("place")) {
+            this.setPlace(v);
+        } else if (s.equals("type")) {
+            this.setType(v);
+        } else if (s.equals("grade")) {
+            this.setGrade(v);
+        } 
+        return;
+    }
 }

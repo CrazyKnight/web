@@ -5,16 +5,16 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 
-import com.TaoBaoOpera.ShowTaoBao;
+import com.table.action.*;
 import com.bean.zfbTbl;
 import com.jdbc.MyConnection;
 import com.jdbc.MyOperation;
-import com.zfbOpera.ShowZfb;
 
 public class zfbGet {
 	public void get(File html) {
@@ -39,16 +39,24 @@ public class zfbGet {
 			String tblName = "table3";
 			
 			 MyConnection util1 = new MyConnection();
-			Connection conn = util1.getConnection(database, user, password);
-			String clean_sql = "delete from table3";
-			PreparedStatement pstmt1;
-			try {
-				pstmt1 = conn.prepareStatement(clean_sql);
-				pstmt1.executeUpdate();
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+			//Connection conn = util1.getConnection(database, user, password);
+			Connection conn = util1.getConnection();
+			String clean_sql = "drop table if exists table3";
+	        try {
+	            Statement stmt = conn.createStatement();
+	            stmt.execute(clean_sql);
+	            stmt.execute("create table table3("+ 
+	                    "csmBNos varchar(50),"+
+	                    "times varchar(50),"+
+	                    "infos varchar(50),"+
+	                    "incomes varchar(50),"+
+	                    "outlays varchar(50),"+
+	                    "balances varchar(50),"+
+	                    "froms varchar(50));");
+	        } catch (SQLException e1) {
+	            // TODO Auto-generated catch block
+	            e1.printStackTrace();
+	        }
 			
 			for (int i = 0; i < csmBNos.size(); i++) {
 				T.setCsmBNos(csmBNos.get(i).text());
@@ -65,7 +73,7 @@ public class zfbGet {
 				T.setFroms(froms.get(i).text());
 				util.addzfb(T, database, user, password, tblName);
 			}
-			new ShowZfb().execute();
+			new ActionTable3().show();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

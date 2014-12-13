@@ -64,4 +64,23 @@ public class zfbTbl {
 	public void setFroms(String froms) {
 		this.froms = froms;
 	}
+	
+	public void set(String s,String v) {
+        if (s.equals("csmBNos")) {
+            this.setCsmBNos(v);
+        } else if (s.equals("times")) {
+            this.setTimes(v);
+        } else if (s.equals("infos")) {
+            this.setInfos(v);
+        } else if (s.equals("incomes")) {
+            this.setIncomes(v);
+        } else if (s.equals("outlays")) {
+            this.setOutlays(v);
+        } else if (s.equals("balances")) {
+            this.setBalances(v);
+        } else if (s.equals("froms")) {
+            this.setFroms(v);
+        }
+        return;
+    }
 }

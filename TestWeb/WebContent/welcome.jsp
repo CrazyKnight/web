@@ -9,6 +9,7 @@
 <body bgcolor="white" text="#FF0000" background="./image/1.jpg">
 
 	<br><br><br><br><br><br><br>
+	<!-- 
 	<center><strong><a href="FileInput.jsp?index=1"><font size="5px" color="black">哈工大成绩单</font></a></strong></center><br>
 	<center><strong><a href="FileInput.jsp?index=2"><font size="5px" color="black">淘宝支付记录</font></a></strong></center><br>
 	<center><strong><a href="FileInput.jsp?index=3"><font size="5px" color="black">支付宝账单</font></a></strong></center><br>
@@ -19,5 +20,17 @@
 	<center><strong><a href="FileInput.jsp?index=8"><font size="5px" color="black">高考成绩分布</font></a></strong></center><br>
 	<center><strong><a href="FileInput.jsp?index=9"><font size="5px" color="black">电影列表</font></a></strong></center><br>
 	<center><strong><a href="FileInput.jsp?index=10"><font size="5px" color="black">bt种子列表</font></a></strong></center><br>
+    -->
+    <center><strong><a href="show1"><font size="5px" color="black">哈工大成绩单</font></a></strong></center><br>
+    <center><strong><a href="show2"><font size="5px" color="black">淘宝支付记录</font></a></strong></center><br>
+    <center><strong><a href="show3"><font size="5px" color="black">支付宝账单</font></a></strong></center><br>
+    <center><strong><a href="show4"><font size="5px" color="black">手机通讯录</font></a></strong></center><br>
+    <center><strong><a href="show5"><font size="5px" color="black">豆瓣小组</font></a></strong></center><br>
+    <center><strong><a href="show6"><font size="5px" color="black">金属熔点表</font></a></strong></center><br>
+    <center><strong><a href="show7"><font size="5px" color="black">歌曲排行榜</font></a></strong></center><br>
+    <center><strong><a href="show8"><font size="5px" color="black">高考成绩分布</font></a></strong></center><br>
+    <center><strong><a href="show9"><font size="5px" color="black">电影列表</font></a></strong></center><br>
+    <center><strong><a href="show10"><font size="5px" color="black">bt种子列表</font></a></strong></center><br>
+
 </body>
 </html>

@@ -2,7 +2,7 @@ package com.webpage;
 
 import java.io.File;
 import java.io.IOException;
-import com.table6.action.*;
+import com.table.action.*;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
