@@ -7,12 +7,12 @@ import org.apache.struts2.ServletActionContext;
 import com.webpage.*;
 
 public class solve {
-	File html = null;
+	File[] html = null;
 	
-	public File getHtml() {
+	public File[] getHtml() {
 		return html;
 	}
-	public void setHtml(File html) {
+	public void setHtml(File[] html) {
 		this.html = html;
 	}
 	public String execute() throws Exception{
