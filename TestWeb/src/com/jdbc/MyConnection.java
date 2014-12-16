@@ -6,6 +6,7 @@ import java.sql.SQLException;
 
 public class MyConnection {
     
+    /*
 	public Connection getConnection(String database,String user,String password){
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
@@ -20,10 +21,11 @@ public class MyConnection {
 		return null;
 		
 	}
-	
+	*/
 	public Connection getConnection() {
 	    try {
             Class.forName("com.mysql.jdbc.Driver");
+            //Connection conn = DriverManager.getConnection("jdbc:mysql://w.rdc.sae.sina.com.cn:3307/app_getwebtable","o45ooj1ykl","0z2hhk45iix5j441mh2wzw4kh001ylkkml055k1z");
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/webtblget","root","123456");
             return conn;
         } catch (Exception e) {

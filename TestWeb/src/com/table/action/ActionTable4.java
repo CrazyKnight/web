@@ -42,7 +42,6 @@ public class ActionTable4 extends ActionSupport {
         MyConnection mc = new MyConnection();
         Connection conn = mc.getConnection();
 
-        try {
             // 获取表结构
             List<String> _list4 = new ArrayList<String>();
             DatabaseMetaData myMetaData = conn.getMetaData();
@@ -66,26 +65,20 @@ public class ActionTable4 extends ActionSupport {
             mc.close(conn);
 
             ServletActionContext.getRequest().getSession()
-                    .setAttribute("_List", _list4);
+                    .setAttribute("_List4", _list4);
             ServletActionContext.getRequest().setAttribute("_list4", _list4);
 
             ServletActionContext.getRequest().getSession()
-                    .setAttribute("List", list4);
+                    .setAttribute("List4", list4);
             ServletActionContext.getRequest().setAttribute("list4", list4);
 
-            if (list4.isEmpty())
-                return "failure";
-            else
                 return "success";
-        } catch (Exception e) {
-            return "failure";
-        }
     }
 
     // 删除行
     public String delete() {
         List<phoneRecordTbl> list4 = (List<phoneRecordTbl>) ServletActionContext
-                .getRequest().getSession().getAttribute("List");
+                .getRequest().getSession().getAttribute("List4");
         int num = Integer.parseInt(index4);
         phoneRecordTbl ba = list4.get(num);
         _delete(ba);
@@ -115,7 +108,7 @@ public class ActionTable4 extends ActionSupport {
     // 删除列
     public String delete0() {
         List<String> _list4 = (List<String>) ServletActionContext.getRequest()
-                .getSession().getAttribute("_List");
+                .getSession().getAttribute("_List4");
         int _num = Integer.parseInt(_index4);
         String s = _list4.get(_num);
         if (!s.equals("num"))

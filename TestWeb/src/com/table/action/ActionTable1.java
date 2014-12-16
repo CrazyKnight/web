@@ -40,66 +40,62 @@ public class ActionTable1 extends ActionSupport {
 
         MyConnection mc = new MyConnection();
         Connection conn = mc.getConnection();
-        try {
-            // 获取表结构
-            List<String> _list1 = new ArrayList<String>();
-            DatabaseMetaData myMetaData = conn.getMetaData();
-            ResultSet _rs = myMetaData.getColumns(null, "%", "table1", "%");
-            while (_rs.next()) {
-                String field = _rs.getString("COLUMN_NAME");
-                _list1.add(field);
-            }
-
-            List<gradeTbl> list1 = new ArrayList<gradeTbl>();
-            String sql = "select * from  table1";
-            Statement stmt = conn.createStatement();
-            ResultSet rs = stmt.executeQuery(sql);
-            while (rs.next()) {
-                gradeTbl gtbl = new gradeTbl();
-                for (int i = 0; i < _list1.size(); i++) {
-                    gtbl.set(_list1.get(i), rs.getString(_list1.get(i)));
-                }
-                list1.add(gtbl);
-            }
-            mc.close(conn);
-
-            ServletActionContext.getRequest().getSession()
-                    .setAttribute("_List", _list1);
-            ServletActionContext.getRequest().setAttribute("_list1", _list1);
-
-            ServletActionContext.getRequest().getSession()
-                    .setAttribute("List", list1);
-            ServletActionContext.getRequest().setAttribute("list1", list1);
-
-            if (list1.isEmpty())
-                return "failure";
-            else
-                return "success";
-        } catch (Exception e) {
-            return "failure";
+        // 获取表结构
+        List<String> _list1 = new ArrayList<String>();
+        DatabaseMetaData myMetaData = conn.getMetaData();
+        ResultSet _rs = myMetaData.getColumns(null, "%", "table1", "%");
+        while (_rs.next()) {
+            String field = _rs.getString("COLUMN_NAME");
+            _list1.add(field);
         }
+
+        List<gradeTbl> list1 = new ArrayList<gradeTbl>();
+        String sql = "select * from  table1";
+        Statement stmt = conn.createStatement();
+        ResultSet rs = stmt.executeQuery(sql);
+        while (rs.next()) {
+            gradeTbl gtbl = new gradeTbl();
+            for (int i = 0; i < _list1.size(); i++) {
+                gtbl.set(_list1.get(i), rs.getString(_list1.get(i)));
+            }
+            list1.add(gtbl);
+        }
+        mc.close(conn);
+
+        ServletActionContext.getRequest().getSession()
+                .setAttribute("_List1", _list1);
+        ServletActionContext.getRequest().setAttribute("_list1", _list1);
+
+        ServletActionContext.getRequest().getSession()
+                .setAttribute("List1", list1);
+        ServletActionContext.getRequest().setAttribute("list1", list1);
+
+        return "success";
     }
 
     // 删除行
     public String delete() {
         List<gradeTbl> list1 = (List<gradeTbl>) ServletActionContext
-                .getRequest().getSession().getAttribute("List");
+                .getRequest().getSession().getAttribute("List1");
+        List<gradeTbl> _list1 = (List<gradeTbl>) ServletActionContext
+                .getRequest().getSession().getAttribute("_List1");
         int num = Integer.parseInt(index1);
         gradeTbl ba = list1.get(num);
         _delete(ba);
-
-        try {
-            show();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+        list1.remove(num);
+        ServletActionContext.getRequest().getSession()
+                .setAttribute("_List1", _list1);
+        ServletActionContext.getRequest().setAttribute("_list1", _list1);
+        ServletActionContext.getRequest().getSession()
+                .setAttribute("List1", list1);
+        ServletActionContext.getRequest().setAttribute("list1", list1);
 
         return SUCCESS;
     }
 
     private void _delete(gradeTbl ba) {
         MyConnection mc = new MyConnection();
-        Connection conn = mc.getConnection("webtblget", "root", "123456");
+        Connection conn = mc.getConnection();
         String sql = "delete from table1 where lessonNum=?";
         PreparedStatement pstmt;
         try {
@@ -115,7 +111,7 @@ public class ActionTable1 extends ActionSupport {
     // 删除列
     public String delete0() {
         List<String> _list1 = (List<String>) ServletActionContext.getRequest()
-                .getSession().getAttribute("_List");
+                .getSession().getAttribute("_List1");
         int _num = Integer.parseInt(_index1);
         String s = _list1.get(_num);
         if (!s.equals("lessonNum"))
@@ -130,7 +126,7 @@ public class ActionTable1 extends ActionSupport {
 
     private void _delete0(String s) {
         MyConnection mc = new MyConnection();
-        Connection conn = mc.getConnection("webtblget", "root", "123456");
+        Connection conn = mc.getConnection();
         String sql = "alter table table1 drop column " + s;
         try {
             Statement stmt = conn.createStatement();

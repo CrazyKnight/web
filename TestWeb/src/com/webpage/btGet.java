@@ -54,11 +54,6 @@ public class btGet {
             }
             new ActionTable10().show();
         } catch (Exception e) {
-            try {
-                new ActionTable10().show();
-            } catch (SQLException e1) {
-                e1.printStackTrace();
-            }
             e.printStackTrace();
         }
     }

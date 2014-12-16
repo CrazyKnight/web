@@ -45,8 +45,18 @@ public class OutToExcel extends ActionSupport {
         this.download = download;
     }
 
-    public String execute() throws SQLException {
+    public String execute() {
         Connection conn = new MyConnection().getConnection();
+        WritableWorkbook book=null;
+        WritableSheet sheet=null;
+        try {
+            book = Workbook.createWorkbook(new File("f:/"
+                    + "table" + tindex + ".xls"));
+            sheet = book.createSheet("table" + tindex, 0);
+        } catch (IOException e1) {
+            download=e1.getMessage();
+            e1.printStackTrace();
+        }
         try {
             String sql = "select * from table" + tindex;
             Statement stmt = conn.createStatement();
@@ -64,9 +74,7 @@ public class OutToExcel extends ActionSupport {
 
             int i = 0;
 
-            WritableWorkbook book = Workbook.createWorkbook(new File("f:/"
-                    + "table" + tindex + ".xls"));
-            WritableSheet sheet = book.createSheet("table" + tindex, 0);
+           
 
             while (rs.next()) {
                 WritableCellFormat wc = new WritableCellFormat();
@@ -121,7 +129,8 @@ public class OutToExcel extends ActionSupport {
                 break;
             }
         } catch (Exception e) {
-            download = "下载失败，请上传数据";
+            //download = "下载失败，请上传数据";
+            //download=e.getLocalizedMessage()+"错误了\n"+e.getMessage();
             return "failure";
         }
         download = "已下载到f盘根目录";

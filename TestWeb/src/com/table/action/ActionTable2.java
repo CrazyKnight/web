@@ -41,7 +41,6 @@ public class ActionTable2 extends ActionSupport {
         MyConnection mc = new MyConnection();
         Connection conn = mc.getConnection();
 
-        try {
         // 获取表结构
         List<String> _list2 = new ArrayList<String>();
         DatabaseMetaData myMetaData = conn.getMetaData();
@@ -50,7 +49,6 @@ public class ActionTable2 extends ActionSupport {
             String field = _rs.getString("COLUMN_NAME");
             _list2.add(field);
         }
-
         List<taobaoTbl> list2 = new ArrayList<taobaoTbl>();
         String sql = "select * from  table2";
         Statement stmt = conn.createStatement();
@@ -63,28 +61,21 @@ public class ActionTable2 extends ActionSupport {
             list2.add(gtbl);
         }
         mc.close(conn);
-        
         ServletActionContext.getRequest().getSession()
-        .setAttribute("_List", _list2);
+        .setAttribute("_List2", _list2);
         ServletActionContext.getRequest().setAttribute("_list2", _list2);
         
         ServletActionContext.getRequest().getSession()
-                .setAttribute("List", list2);
+                .setAttribute("List2", list2);
         ServletActionContext.getRequest().setAttribute("list2", list2);
 
-        if (list2.isEmpty())
-            return "failure";
-        else
             return "success";
-        }catch (Exception e) {
-            return "failure";
-        }
     }
 
     //删除行
     public String delete() {
         List<taobaoTbl> list2 = (List<taobaoTbl>) ServletActionContext
-                .getRequest().getSession().getAttribute("List");
+                .getRequest().getSession().getAttribute("List2");
         int num = Integer.parseInt(index2);
         taobaoTbl ba = list2.get(num);
         _delete(ba);
@@ -100,11 +91,11 @@ public class ActionTable2 extends ActionSupport {
     private void _delete(taobaoTbl ba) {
         MyConnection mc = new MyConnection();
         Connection conn = mc.getConnection();
-        String sql = "delete from table2 where baobeiNames=?";
+        String sql = "delete from table2 where numItem=?";
         PreparedStatement pstmt;
         try {
             pstmt = conn.prepareStatement(sql);
-            pstmt.setString(1, ba.getBaobeiNames());
+            pstmt.setString(1, ba.getNumItem());
             pstmt.executeUpdate();
             mc.close(conn);
         } catch (SQLException e) {
@@ -115,10 +106,10 @@ public class ActionTable2 extends ActionSupport {
     //删除列
     public String delete0() {
         List<String> _list2 = (List<String>) ServletActionContext
-                .getRequest().getSession().getAttribute("_List");
+                .getRequest().getSession().getAttribute("_List2");
         int _num = Integer.parseInt(_index2);
         String s = _list2.get(_num);
-        if(!s.equals("baobeiNames"))
+        if(!s.equals("numItem"))
             _delete0(s);
         try {
             show();

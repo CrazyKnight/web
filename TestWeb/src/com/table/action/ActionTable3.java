@@ -36,10 +36,9 @@ public class ActionTable3 extends ActionSupport {
     }
 
     // 查询
-    public String show() {
+    public String show() throws SQLException{
         MyConnection mc = new MyConnection();
         Connection conn = mc.getConnection();
-        try {
             // 获取表结构
             List<String> _list3 = new ArrayList<String>();
             DatabaseMetaData myMetaData = conn.getMetaData();
@@ -63,26 +62,21 @@ public class ActionTable3 extends ActionSupport {
             mc.close(conn);
 
             ServletActionContext.getRequest().getSession()
-                    .setAttribute("_List", _list3);
+                    .setAttribute("_List3", _list3);
             ServletActionContext.getRequest().setAttribute("_list3", _list3);
 
             ServletActionContext.getRequest().getSession()
-                    .setAttribute("List", list3);
+                    .setAttribute("List3", list3);
             ServletActionContext.getRequest().setAttribute("list3", list3);
 
-            if (list3.isEmpty())
-                return "failure";
-            else
-                return "success";
-        } catch (Exception e) {
-            return "failure";
-        }
+            return "success";
+        
     }
 
     // 删除行
-    public String delete() {
+    public String delete() throws SQLException{
         List<zfbTbl> list3 = (List<zfbTbl>) ServletActionContext.getRequest()
-                .getSession().getAttribute("List");
+                .getSession().getAttribute("List3");
         int num = Integer.parseInt(index3);
         zfbTbl ba = list3.get(num);
         _delete(ba);
@@ -106,9 +100,9 @@ public class ActionTable3 extends ActionSupport {
     }
 
     // 删除列
-    public String delete0() {
+    public String delete0() throws SQLException{
         List<String> _list3 = (List<String>) ServletActionContext.getRequest()
-                .getSession().getAttribute("_List");
+                .getSession().getAttribute("_List3");
         int _num = Integer.parseInt(_index3);
         String s = _list3.get(_num);
         if (!s.equals("csmBNos"))

@@ -40,7 +40,6 @@ public class ActionTable5 extends ActionSupport {
         MyConnection mc = new MyConnection();
         Connection conn = mc.getConnection();
 
-        try {
             // 获取表结构
             List<String> _list5 = new ArrayList<String>();
             DatabaseMetaData myMetaData = conn.getMetaData();
@@ -64,26 +63,20 @@ public class ActionTable5 extends ActionSupport {
             mc.close(conn);
 
             ServletActionContext.getRequest().getSession()
-                    .setAttribute("_List", _list5);
+                    .setAttribute("_List5", _list5);
             ServletActionContext.getRequest().setAttribute("_list5", _list5);
 
             ServletActionContext.getRequest().getSession()
-                    .setAttribute("List", list5);
+                    .setAttribute("List5", list5);
             ServletActionContext.getRequest().setAttribute("list5", list5);
 
-            if (list5.isEmpty())
-                return "failure";
-            else
                 return "success";
-        } catch (Exception e) {
-            return "failure";
-        }
     }
 
     // 删除行
     public String delete() {
         List<doubanTbl> list5 = (List<doubanTbl>) ServletActionContext
-                .getRequest().getSession().getAttribute("List");
+                .getRequest().getSession().getAttribute("List5");
         int num = Integer.parseInt(index5);
         doubanTbl ba = list5.get(num);
         _delete(ba);
@@ -115,7 +108,7 @@ public class ActionTable5 extends ActionSupport {
     // 删除列
     public String delete0() {
         List<String> _list5 = (List<String>) ServletActionContext.getRequest()
-                .getSession().getAttribute("_List");
+                .getSession().getAttribute("_List5");
         int _num = Integer.parseInt(_index5);
         String s = _list5.get(_num);
         if (!s.equals("topic"))

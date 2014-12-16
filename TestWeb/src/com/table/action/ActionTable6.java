@@ -39,7 +39,6 @@ public class ActionTable6 extends ActionSupport {
     public String show() throws SQLException {
         MyConnection mc = new MyConnection();
         Connection conn = mc.getConnection();
-        try {
             // 获取表结构
             List<String> _list6 = new ArrayList<String>();
             DatabaseMetaData myMetaData = conn.getMetaData();
@@ -63,26 +62,20 @@ public class ActionTable6 extends ActionSupport {
             mc.close(conn);
 
             ServletActionContext.getRequest().getSession()
-                    .setAttribute("_List", _list6);
+                    .setAttribute("_List6", _list6);
             ServletActionContext.getRequest().setAttribute("_list6", _list6);
 
             ServletActionContext.getRequest().getSession()
-                    .setAttribute("List", list6);
+                    .setAttribute("List6", list6);
             ServletActionContext.getRequest().setAttribute("list6", list6);
 
-            if (list6.isEmpty())
-                return "failure";
-            else
                 return "success";
-        } catch (Exception e) {
-            return "failure";
-        }
     }
 
     // 删除行
     public String delete() {
         List<metalTbl> list6 = (List<metalTbl>) ServletActionContext
-                .getRequest().getSession().getAttribute("List");
+                .getRequest().getSession().getAttribute("List6");
         int num = Integer.parseInt(index6);
         metalTbl ba = list6.get(num);
         _delete(ba);
@@ -114,7 +107,7 @@ public class ActionTable6 extends ActionSupport {
     // 删除列
     public String delete0() {
         List<String> _list6 = (List<String>) ServletActionContext.getRequest()
-                .getSession().getAttribute("_List");
+                .getSession().getAttribute("_List6");
         int _num = Integer.parseInt(_index6);
         String s = _list6.get(_num);
         if (!s.equals("Metal"))

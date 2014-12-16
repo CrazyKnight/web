@@ -2,15 +2,80 @@ package com.jdbc;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.bean.*;
 
 public class MyOperation {
+	public boolean exit_user(String username,String password){
+		
+		List<String> temp = new ArrayList<String>();
+		 MyConnection util = new MyConnection();
+	     Connection conn = util.getConnection();
+	     String sql = "select *from users where name = ? and password =?";
+	     try {
+			PreparedStatement pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, username);
+			pstmt.setString(2, password);
+			ResultSet rs = pstmt.executeQuery();
+			while(rs.next()){
+				temp.add(rs.getString("name"));
+			}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	     if(temp.isEmpty()){
+				return false;
+			}else{
+				return true;
+			}			
+	}
+public boolean exit_username(String username){
+		
+		List<String> temp = new ArrayList<String>();
+		 MyConnection util = new MyConnection();
+	     Connection conn = util.getConnection();
+	     String sql = "select * from users where name = ?";
+	     try {
+			PreparedStatement pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, username);
+			ResultSet rs = pstmt.executeQuery();
+			while(rs.next()){
+				temp.add(rs.getString("name"));
+			}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	     if(temp.isEmpty()){
+				return false;
+			}else{
+				return true;
+			}			
+	}
+	public void addUser(String username,String password){
+		MyConnection util = new MyConnection();
+	     Connection conn = util.getConnection();
+	     String sql = "insert into users values(?,?)";
+	     try {
+			PreparedStatement pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1,username);
+			pstmt.setString(2,password);
+			pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+	}
     public void addgrade(gradeTbl L, String database, String user,
             String password, String tblName, boolean isFirst) {
         MyConnection util = new MyConnection();
-        Connection conn = util.getConnection(database, user, password);
+        Connection conn = util.getConnection();
         String sql = "insert into " + tblName + " values(?,?,?,?,?,?,?,?,?,?)";
         try {
             if (isFirst) {
@@ -53,16 +118,17 @@ public class MyOperation {
         MyConnection util = new MyConnection();
         //Connection conn = util.getConnection(database, user, password);
         Connection conn = util.getConnection();
-        String sql = "insert into " + tblName + " values(?,?,?,?,?,?)";
+        String sql = "insert into " + tblName + " values(?,?,?,?,?,?,?)";
         try {
 
             PreparedStatement pstmt = conn.prepareStatement(sql);
-            pstmt.setString(1, T.getNumItem());
-            pstmt.setString(2, T.getShops());
-            pstmt.setString(3, T.getBaobeiNames());
-            pstmt.setString(4, T.getSpecs());
-            pstmt.setString(5, T.getPrices());
-            pstmt.setString(6, T.getQutys());
+            pstmt.setString(1, T.getMulti());
+            pstmt.setString(2, T.getNumItem());
+            pstmt.setString(3, T.getShops());
+            pstmt.setString(4, T.getBaobeiNames());
+            pstmt.setString(5, T.getSpecs());
+            pstmt.setString(6, T.getPrices());
+            pstmt.setString(7, T.getQutys());
             pstmt.executeUpdate();
         } catch (Exception e) {
             e.printStackTrace();

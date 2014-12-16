@@ -67,12 +67,6 @@ public class gradeGet {
             }
             new ActionTable1().show();
         } catch (Exception e) {
-            try {
-                new ActionTable1().show();
-            } catch (SQLException e1) {
-                // TODO Auto-generated catch block
-                e1.printStackTrace();
-            }
             e.printStackTrace();
             //System.out.println("输入不合法文件");
         }

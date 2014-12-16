@@ -58,12 +58,6 @@ public class gaokaoGet {
             }
             new ActionTable8().show();
         } catch (Exception e) {
-            try {
-                new ActionTable8().show();
-            } catch (SQLException e1) {
-                // TODO Auto-generated catch block
-                e1.printStackTrace();
-            }
             e.printStackTrace();
         }
     }

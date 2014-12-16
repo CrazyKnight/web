@@ -8,7 +8,7 @@
 	<package name="default" namespace="/" extends="struts-default">
     <default-action-ref name="default"></default-action-ref>
         <action name="default">
-            <result>welcome.jsp</result>
+            <result>login.jsp</result>
         </action>
 		<action name="fileinput" class="com.action.solve" method="execute">
 			<result name="failure">failure.jsp</result>
@@ -24,7 +24,6 @@
 			<result name="10">/showTable10.jsp</result>
 		</action>	
 		<action name="show2" class="com.table.action.ActionTable2" method="show">
-		 <result name="failure">showTaoBao.jsp</result>
             <result>showTaoBao.jsp</result>
         </action>	
 		<action name="delete2" class="com.table.action.ActionTable2" method="delete">
@@ -34,7 +33,6 @@
         <result name="success">/showTaoBao.jsp</result>
         </action>
         <action name="show3" class="com.table.action.ActionTable3" method="show">
-            <result name="failure">/showZfb.jsp</result>
             <result>showZfb.jsp</result>
         </action>
 		<action name="delete3" class="com.table.action.ActionTable3" method="delete">
@@ -45,7 +43,6 @@
         </action>
         <action name="show5" class="com.table.action.ActionTable5"
             method="show">
-             <result name="failure">showDB.jsp</result>
             <result>showDB.jsp</result>
         </action>
 		<action name="delete5" class="com.table.action.ActionTable5" method="delete">
@@ -56,7 +53,6 @@
         </action>
         <action name="show7" class="com.table.action.ActionTable7"
             method="show">
-             <result name="failure">showMusic.jsp</result>
             <result>showMusic.jsp</result>
         </action>
 		<action name="delete7" class="com.table.action.ActionTable7" method="delete">
@@ -67,7 +63,6 @@
         </action>
         <action name="show9" class="com.table.action.ActionTable9"
             method="show">
-             <result name="failure">showMovie.jsp</result>
             <result>showMovie.jsp</result>
         </action>
 		<action name="delete9" class="com.table.action.ActionTable9" method="delete">
@@ -78,7 +73,6 @@
         </action>
 		
 		<action name="show1" class="com.table.action.ActionTable1" method="show">
-		 <result name="failure">showTable1.jsp</result>
             <result>showTable1.jsp</result>
         </action>
 		<action name="delete1" class="com.table.action.ActionTable1" method="delete">
@@ -90,7 +84,6 @@
         
         <action name="show4" class="com.table.action.ActionTable4"
             method="show">
-             <result name="failure">showTable4.jsp</result>
             <result>showTable4.jsp</result>
         </action>
         <action name="delete4" class="com.table.action.ActionTable4"
@@ -105,7 +98,6 @@
         
         <action name="show6" class="com.table.action.ActionTable6"
             method="show">
-             <result name="failure">showTable6.jsp</result>
             <result>showTable6.jsp</result>
         </action>
         <action name="delete6" class="com.table.action.ActionTable6"
@@ -119,7 +111,6 @@
         
         <action name="show8" class="com.table.action.ActionTable8"
             method="show">
-             <result name="failure">showTable8.jsp</result>
             <result>showTable8.jsp</result>
         </action>
         <action name="delete8" class="com.table.action.ActionTable8"
@@ -133,7 +124,6 @@
         
         <action name="show10" class="com.table.action.ActionTable10"
             method="show">
-             <result name="failure">showTable10.jsp</result>
             <result>showTable10.jsp</result>
         </action>
         <action name="delete10" class="com.table.action.ActionTable10"
@@ -184,6 +174,15 @@
         <action name="download10" class="com.table.action.OutToExcel" method="execute">
          <result name="failure">showTable10.jsp</result>
             <result>showTable10.jsp</result>
+        </action>
+        <action name="login" class ="com.action.Login" method="execute">
+        <result name="fail">login.jsp</result>
+        <result name="success">welcome.jsp</result>
+        </action>
+        
+        <action name="register" class="com.action.Register" method="execute">
+        <result name="fail">register.jsp</result>
+        <result name="success">login.jsp</result>
         </action>
 		
 	</package>

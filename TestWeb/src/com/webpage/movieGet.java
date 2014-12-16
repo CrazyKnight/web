@@ -66,12 +66,6 @@ public class movieGet {
             }
             new ActionTable9().show();
         } catch (Exception e) {
-           try {
-            new ActionTable9().show();
-        } catch (SQLException e1) {
-            // TODO Auto-generated catch block
-            e1.printStackTrace();
-        }
             e.printStackTrace();
         }
 

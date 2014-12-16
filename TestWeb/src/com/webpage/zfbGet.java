@@ -70,7 +70,7 @@ public class zfbGet {
             }
             new ActionTable3().show();
         } catch (Exception e) {
-            new ActionTable3().show();
+           
             e.printStackTrace();
         }
     }
